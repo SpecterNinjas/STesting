@@ -16,8 +16,8 @@
 }
 
 .active_filter {
-    background-color: rgb(79, 149, 255);
-    color: white;
+    background-color: rgb(225, 237, 255);
+    color: rgb(162, 199, 255);
 }
 
 .li_button {
@@ -31,7 +31,7 @@
 
 .not_active_filter {
     background-color: rgb(225, 237, 255);
-    color: rgb(162, 199, 255);
+    color: lightgray;
 }
 
 .figure {
@@ -42,4 +42,18 @@
 
 .figure-caption {
     max-width: 250px;
+}
+
+.page-links {
+    text-align: center;
+    margin: auto;
+    width: 50%
+}
+
+.page-links a{
+color: rgb(23,162,184);
+}
+
+.page-links a:hover{
+color: white;
 }

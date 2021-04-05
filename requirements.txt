@@ -52,7 +52,7 @@ decorator==4.4.2
 defusedxml==0.6.0
 diff-match-patch @ file:///tmp/build/80754af9/diff-match-patch_1594828741838/work
 distributed @ file:///C:/ci/distributed_1594742844291/work
-Django==3.1.7
+Django~=2.2.19
 django-allauth==0.44.0
 django-crispy-forms==1.10.0
 django-markdown-deux==1.0.5
@@ -278,3 +278,5 @@ zict==2.0.0
 zipp==3.1.0
 zope.event==4.4
 zope.interface==4.7.1
+
+djangorestframework~=3.12.4

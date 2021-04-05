@@ -1,0 +1,64 @@
+{% extends 'accounts/base.html' %}
+{% load static i18n %}
+{% load crispy_forms_tags %}
+
+{% block title %}{% trans "Tadqiqotlar" %}{% endblock %}
+{% block css_link %}
+    <link rel="stylesheet" href="{% static 'researches/researches.css' %}">
+{% endblock %}
+
+
+{% block body %}
+    <div class="container">
+        {% if all_research %}
+            <div class="research pt-4">
+                <h4>{% trans 'Tadqiqotlar' %}</h4>
+                <p class="text-secondary">{% trans "Xalqaro va milliy baholash tadqiqotlardan boxabar bo'ling" %}</p>
+
+
+                <ul class="list-inline">
+
+                    <li class="list-inline-item">
+                        <button class="not_active_filter li_button"><a class="text-white text-decoration-none" href="{% url 'researches:inter_researches' %}">{% trans 'Xalqaro' %}</a></button>
+                    </li>
+
+                    <li class="list-inline-item">
+                        <button class="active_filter li_button"><a class="text-white text-decoration-none" href="{% url 'researches:national_researches' %}">{% trans 'Milliy' %}</a></button>
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="research-details">
+                <div class="row">
+                    {% for research in page.object_list %}
+                        <figure class="figure">
+                            <img src="{{ research.image.url }}" style="height: 230px; width: 250px;"
+                                 class="figure-img img-fluid rounded"
+                                 alt="A generic square placeholder image with rounded corners in a figure.">
+                            <figcaption class="figure-caption">
+                                <p class="font-weight-bold text-dark" style="font-size:16px;">{{ research.title }}</p>
+                                <p style="font-size:14px;">{{ research.description }}</p>
+                            </figcaption>
+                        </figure>
+                    {% endfor %}
+                </div>
+
+            </div>
+
+            <div class="page-links">
+                {% if page.has_previous %}
+                   <button class="btn btn-outline-info"> <a class="font-weight-bold mx-3 text-decoration-none" href="{% url 'researches:national_researches' %}?page={{ page.previous_page_number }}">{% trans 'Oldingi' %}</a></button>
+                {% endif %}
+                {% if page.has_next %}
+                    <button class="btn btn-outline-info"> <a class="font-weight-bold text-decoration-none" href="{% url 'researches:national_researches' %}?page={{ page.next_page_number }}">{% trans 'Keyingi' %}</a></button>
+                {% endif %}
+            </div>
+        {% else %}
+            <h3>{% trans "Tadqiqotlar to'plami mavjud emas." %}</h3>
+        {% endif %}
+    </div>
+    <br><br>
+    <br>
+{% endblock %}
+

@@ -1,0 +1,422 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-04-05 19:53+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: .\about\models.py:19 .\about\models.py:20
+msgid "Company Details"
+msgstr ""
+
+#: .\accounts\forms.py:15 .\accounts\templates\accounts\login.html:21
+msgid "Login"
+msgstr ""
+
+#: .\accounts\forms.py:16 .\accounts\templates\accounts\login.html:29
+msgid "Parol"
+msgstr ""
+
+#: .\accounts\forms.py:17
+msgid "Tasdiqlang"
+msgstr ""
+
+#: .\accounts\forms.py:54
+msgid "Ism va familiya"
+msgstr ""
+
+#: .\accounts\forms.py:55
+msgid "Telefon raqam"
+msgstr ""
+
+#: .\accounts\forms.py:56
+msgid "Hudud"
+msgstr ""
+
+#: .\accounts\forms.py:57
+msgid "Shahar/tuman"
+msgstr ""
+
+#: .\accounts\forms.py:58
+msgid "Maktab"
+msgstr ""
+
+#: .\accounts\forms.py:59
+msgid "Sinf"
+msgstr ""
+
+#: .\accounts\models.py:8
+msgid "Hududingizni tanlang"
+msgstr ""
+
+#: .\accounts\models.py:9
+msgid "hudud1"
+msgstr ""
+
+#: .\accounts\models.py:10
+msgid "hudud2"
+msgstr ""
+
+#: .\accounts\models.py:11
+msgid "hudud3"
+msgstr ""
+
+#: .\accounts\models.py:14
+msgid "Shahar/tumaningizni tanlang"
+msgstr ""
+
+#: .\accounts\models.py:15
+msgid "Buxoro"
+msgstr ""
+
+#: .\accounts\models.py:16
+msgid "Toshkent"
+msgstr ""
+
+#: .\accounts\models.py:17
+msgid "Samarqand"
+msgstr ""
+
+#: .\accounts\models.py:20
+msgid "Maktabingizni tanlang"
+msgstr ""
+
+#: .\accounts\models.py:21
+msgid "maktab1"
+msgstr ""
+
+#: .\accounts\models.py:22
+msgid "maktab2"
+msgstr ""
+
+#: .\accounts\models.py:23
+msgid "maktab3"
+msgstr ""
+
+#: .\accounts\models.py:27
+msgid "Sinfingizni tanlang"
+msgstr ""
+
+#: .\accounts\models.py:28
+msgid "sinf1"
+msgstr ""
+
+#: .\accounts\models.py:29
+msgid "sinf2"
+msgstr ""
+
+#: .\accounts\models.py:30
+msgid "sinf3"
+msgstr ""
+
+#: .\accounts\models.py:47
+msgid "Profile"
+msgstr ""
+
+#: .\accounts\models.py:48
+msgid "Profiles"
+msgstr ""
+
+#: .\accounts\templates\accounts\footer.html:44
+#, python-format
+msgid " %(field.company_description)s "
+msgstr ""
+
+#: .\accounts\templates\accounts\footer.html:54
+msgid "Bog'lanish"
+msgstr ""
+
+#: .\accounts\templates\accounts\footer.html:58
+msgid "Manzil:"
+msgstr ""
+
+#: .\accounts\templates\accounts\footer.html:61
+msgid "Elektron Pochta:"
+msgstr ""
+
+#: .\accounts\templates\accounts\footer.html:64
+msgid "Telefon Raqam:"
+msgstr ""
+
+#: .\accounts\templates\accounts\login.html:10
+msgid "Iltimos avval akkauntdan chiqing."
+msgstr ""
+
+#: .\accounts\templates\accounts\login.html:36
+#: .\accounts\templates\accounts\navbar.html:37
+msgid "Kirish"
+msgstr ""
+
+#: .\accounts\templates\accounts\main.html:33
+#, python-format
+msgid " Foydalanuvchi: %(user)s "
+msgstr ""
+
+#: .\accounts\templates\accounts\main.html:35
+msgid "Registratsiyadan o'tmagan foydalanuvchi"
+msgstr ""
+
+#: .\accounts\templates\accounts\navbar.html:12
+msgid "STesting Loyihasi Haqida"
+msgstr ""
+
+#: .\accounts\templates\accounts\navbar.html:16
+#: .\researches\templates\researches\inter_research.html:5
+#: .\researches\templates\researches\inter_research.html:15
+#: .\researches\templates\researches\national_research.html:5
+#: .\researches\templates\researches\national_research.html:15
+#: .\researches\templates\researches\researches.html:5
+#: .\researches\templates\researches\researches.html:15
+msgid "Tadqiqotlar"
+msgstr ""
+
+#: .\accounts\templates\accounts\navbar.html:19
+msgid "Videodarsliklar"
+msgstr ""
+
+#: .\accounts\templates\accounts\navbar.html:22
+msgid "Yo'riqnoma"
+msgstr ""
+
+#: .\accounts\templates\accounts\navbar.html:25
+#: .\publications\templates\publications\international_nashr.html:5
+#: .\publications\templates\publications\international_nashr.html:15
+#: .\publications\templates\publications\nashrlar.html:5
+#: .\publications\templates\publications\nashrlar.html:15
+#: .\publications\templates\publications\national_nashr.html:5
+#: .\publications\templates\publications\national_nashr.html:15
+msgid "Nashrlar"
+msgstr ""
+
+#: .\accounts\templates\accounts\navbar.html:31
+msgid "Chiqish"
+msgstr ""
+
+#: .\accounts\templates\accounts\navbar.html:40
+#: .\accounts\templates\accounts\register1.html:5
+msgid "Ro'yxatdan o'tish"
+msgstr ""
+
+#: .\accounts\templates\accounts\register1.html:10
+msgid "Iltimos akkauntingizdan chiqing"
+msgstr ""
+
+#: .\accounts\templates\accounts\register1.html:40
+msgid "Davom ettirish"
+msgstr ""
+
+#: .\accounts\views.py:46
+msgid "Sizning akkauntingiz bloklangan."
+msgstr ""
+
+#: .\accounts\views.py:48
+msgid "Noto'g'ri kirish tafsilotlari berildi"
+msgstr ""
+
+#: .\publications\models.py:7 .\researches\models.py:7
+msgid "international"
+msgstr ""
+
+#: .\publications\models.py:8 .\researches\models.py:8
+msgid "national"
+msgstr ""
+
+#: .\publications\models.py:24
+msgid "Publication"
+msgstr ""
+
+#: .\publications\models.py:25
+msgid "Publications"
+msgstr ""
+
+#: .\publications\templates\publications\international_nashr.html:16
+#: .\publications\templates\publications\nashrlar.html:16
+#: .\publications\templates\publications\national_nashr.html:16
+#: .\researches\templates\researches\inter_research.html:16
+#: .\researches\templates\researches\national_research.html:16
+#: .\researches\templates\researches\researches.html:16
+msgid "Xalqaro va milliy baholash tadqiqotlardan boxabar bo'ling"
+msgstr ""
+
+#: .\publications\templates\publications\international_nashr.html:23
+#: .\publications\templates\publications\nashrlar.html:23
+#: .\publications\templates\publications\national_nashr.html:23
+#: .\researches\templates\researches\inter_research.html:23
+#: .\researches\templates\researches\national_research.html:22
+#: .\researches\templates\researches\researches.html:23
+msgid "Xalqaro"
+msgstr ""
+
+#: .\publications\templates\publications\international_nashr.html:29
+#: .\publications\templates\publications\nashrlar.html:29
+#: .\publications\templates\publications\national_nashr.html:29
+#: .\researches\templates\researches\inter_research.html:29
+#: .\researches\templates\researches\national_research.html:26
+#: .\researches\templates\researches\researches.html:29
+msgid "Milliy"
+msgstr ""
+
+#: .\publications\templates\publications\international_nashr.html:40
+msgid "Publication Image"
+msgstr ""
+
+#: .\publications\templates\publications\international_nashr.html:52
+#: .\publications\templates\publications\nashrlar.html:52
+#: .\publications\templates\publications\national_nashr.html:51
+msgid "Yuklab olish"
+msgstr ""
+
+#: .\publications\templates\publications\international_nashr.html:66
+#: .\publications\templates\publications\nashrlar.html:65
+#: .\publications\templates\publications\national_nashr.html:65
+#: .\researches\templates\researches\inter_research.html:56
+#: .\researches\templates\researches\national_research.html:51
+#: .\researches\templates\researches\researches.html:56
+#: .\videos\templates\videos\parents_videos.html:65
+#: .\videos\templates\videos\student_videos.html:65
+#: .\videos\templates\videos\teacher_videos.html:65
+#: .\videos\templates\videos\videos.html:65
+msgid "Oldingi"
+msgstr ""
+
+#: .\publications\templates\publications\international_nashr.html:71
+#: .\publications\templates\publications\nashrlar.html:70
+#: .\publications\templates\publications\national_nashr.html:70
+#: .\researches\templates\researches\inter_research.html:61
+#: .\researches\templates\researches\national_research.html:54
+#: .\researches\templates\researches\researches.html:59
+#: .\videos\templates\videos\parents_videos.html:70
+#: .\videos\templates\videos\student_videos.html:70
+#: .\videos\templates\videos\teacher_videos.html:70
+#: .\videos\templates\videos\videos.html:70
+msgid "Keyingi"
+msgstr ""
+
+#: .\publications\templates\publications\international_nashr.html:76
+#: .\publications\templates\publications\nashrlar.html:75
+#: .\publications\templates\publications\national_nashr.html:75
+#: .\researches\templates\researches\inter_research.html:66
+#: .\researches\templates\researches\national_research.html:58
+#: .\researches\templates\researches\researches.html:63
+msgid "Tadqiqotlar to'plami mavjud emas."
+msgstr ""
+
+#: .\publications\templates\publications\nashrlar.html:40
+msgid "Nashr Tasviri"
+msgstr ""
+
+#: .\publications\templates\publications\nashrlar.html:48
+#: .\publications\templates\publications\national_nashr.html:47
+#, python-format
+msgid "%(publication.description)s"
+msgstr ""
+
+#: .\researches\models.py:24
+msgid "Research"
+msgstr ""
+
+#: .\researches\models.py:25
+msgid "Researches"
+msgstr ""
+
+#: .\stesting\settings.py:112
+msgid "English"
+msgstr ""
+
+#: .\stesting\settings.py:113
+msgid "Russian"
+msgstr ""
+
+#: .\stesting\settings.py:114
+msgid "Uzbek"
+msgstr ""
+
+#: .\videos\models.py:7
+msgid "TIMSS"
+msgstr ""
+
+#: .\videos\models.py:8
+msgid "PISA"
+msgstr ""
+
+#: .\videos\models.py:9
+msgid "PIRLS"
+msgstr ""
+
+#: .\videos\models.py:12
+msgid "teachers"
+msgstr ""
+
+#: .\videos\models.py:13
+msgid "students"
+msgstr ""
+
+#: .\videos\models.py:14
+msgid "parents"
+msgstr ""
+
+#: .\videos\models.py:30
+msgid "Video"
+msgstr ""
+
+#: .\videos\models.py:31
+msgid "Videos"
+msgstr ""
+
+#: .\videos\templates\videos\parents_videos.html:5
+#: .\videos\templates\videos\parents_videos.html:15
+#: .\videos\templates\videos\student_videos.html:5
+#: .\videos\templates\videos\student_videos.html:15
+#: .\videos\templates\videos\teacher_videos.html:5
+#: .\videos\templates\videos\teacher_videos.html:15
+#: .\videos\templates\videos\videos.html:5
+#: .\videos\templates\videos\videos.html:15
+msgid "Videodarslar"
+msgstr ""
+
+#: .\videos\templates\videos\parents_videos.html:16
+#: .\videos\templates\videos\student_videos.html:16
+#: .\videos\templates\videos\teacher_videos.html:16
+#: .\videos\templates\videos\videos.html:16
+msgid "Xalqaro va milliy baholash videodarslardan boxabar bo'ling"
+msgstr ""
+
+#: .\videos\templates\videos\parents_videos.html:23
+#: .\videos\templates\videos\student_videos.html:23
+#: .\videos\templates\videos\teacher_videos.html:23
+#: .\videos\templates\videos\videos.html:23
+msgid "O‘quvchilaruchun"
+msgstr ""
+
+#: .\videos\templates\videos\parents_videos.html:29
+#: .\videos\templates\videos\student_videos.html:29
+#: .\videos\templates\videos\teacher_videos.html:29
+#: .\videos\templates\videos\videos.html:29
+msgid "O‘qituvchilaruchun"
+msgstr ""
+
+#: .\videos\templates\videos\parents_videos.html:34
+#: .\videos\templates\videos\student_videos.html:34
+#: .\videos\templates\videos\teacher_videos.html:34
+#: .\videos\templates\videos\videos.html:34
+msgid "Ota-onalaruchun"
+msgstr ""
+
+#: .\videos\templates\videos\parents_videos.html:76
+#: .\videos\templates\videos\student_videos.html:76
+#: .\videos\templates\videos\teacher_videos.html:76
+#: .\videos\templates\videos\videos.html:76
+msgid "Videolar to'plami mavjud emas."
+msgstr ""

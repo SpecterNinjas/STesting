@@ -1,0 +1,80 @@
+{% extends 'accounts/base.html' %}
+{% load static i18n %}
+{% load crispy_forms_tags %}
+
+{% block title %}{% trans "Nashrlar" %}{% endblock %}
+{% block css_link %}
+    <link rel="stylesheet" href="{% static 'researches/researches.css' %}">
+{% endblock %}
+
+
+{% block body %}
+    <div class="container">
+        {% if all_publications %}
+            <div class="research pt-4">
+                <h4>{% trans "Nashrlar" %}</h4>
+                <p class="text-secondary">{% trans "Xalqaro va milliy baholash tadqiqotlardan boxabar bo'ling" %}</p>
+
+
+                <ul class="list-inline">
+
+                    <li class="list-inline-item">
+                        <button class="not_active_filter li_button"><a class="text-white text-decoration-none"
+                                                                       href="{% url 'publications:international_publications' %}">{% trans "Xalqaro" %}</a>
+                        </button>
+                    </li>
+
+                    <li class="list-inline-item">
+                        <button class="not_active_filter li_button"><a class="text-white text-decoration-none"
+                                                                       href="{% url 'publications:national_publications' %}">{% trans "Milliy" %}</a>
+                        </button>
+                    </li>
+                </ul>
+
+            </div>
+
+            {% for publication in page.object_list %}
+                <div class="row mt-3 p-3"
+                     style="border: 1px solid lightgrey;border-radius: 10px;box-shadow: 5px 10px 18px #888888;">
+                    <div class="float-left pull-left col-md-3">
+                        <img src="{{ publication.image.url }}" alt="Publication Image" height="200" width="180">
+                    </div>
+
+                    <div class="col-md-9">
+                        <p class="text-capitalize font-weight-bold" style="font-size:20px;">{{ publication.title }}</p>
+
+                        <p class="text-secondary">
+                            {% blocktrans %}{{ publication.description }}{% endblocktrans %}
+                        </p>
+                        <a href="{{ publication.file.url }}" download>
+                            <button class="btn btn-info">
+                                <i class="fa fa-download" aria-hidden="true"></i>{% trans 'Yuklab olish' %}
+                            </button>
+                        </a>
+                    </div>
+
+
+                </div>
+            {% endfor %}
+
+
+            <br>
+            <div class="page-links">
+                {% if page.has_previous %}
+                    <button class="btn btn-outline-info"><a class="font-weight-bold mx-3 text-decoration-none"
+                                                            href="{% url 'publications:national_publications' %}?page={{ page.previous_page_number }}">{% trans 'Oldingi' %}
+                    </a></button>
+                {% endif %}
+                {% if page.has_next %}
+                    <button class="btn btn-outline-info"><a class="font-weight-bold text-decoration-none"
+                                                            href="{% url 'publications:national_publications' %}?page={{ page.next_page_number }}">{% trans 'Keyingi' %}
+                    </a></button>
+                {% endif %}
+            </div>
+        {% else %}
+            <h3>{% trans "Tadqiqotlar to'plami mavjud emas." %}</h3>
+        {% endif %}
+    </div>
+    <br><br><br>
+    <br><br><br>
+{% endblock %}

@@ -1,16 +1,17 @@
 from django.db import models
+from django.utils.translation import ugettext_lazy as _
 
 
 class Video(models.Model):
     ASSESSMENT_TYPES = (
-        ('TIMSS', 'TIMSS'),
-        ('PISA', 'PISA'),
-        ('PIRLS', 'PIRLS'),
+        ('TIMSS', _('TIMSS')),
+        ('PISA', _('PISA')),
+        ('PIRLS', _('PIRLS')),
     )
     VIDEO_TYPES = (
-        ('teachers', 'teachers'),
-        ('students', 'students'),
-        ('parents', 'parents'),
+        ('teachers', _('teachers')),
+        ('students', _('students')),
+        ('parents', _('parents')),
     )
 
     title = models.CharField(max_length=700)
@@ -26,5 +27,5 @@ class Video(models.Model):
         return str(self.title)
 
     class Meta:
-        verbose_name = 'Video'
-        verbose_name_plural = 'Videos'
+        verbose_name = _('Video')
+        verbose_name_plural = _('Videos')

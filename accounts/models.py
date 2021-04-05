@@ -1,32 +1,33 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.utils.translation import ugettext_lazy as _
 
 
 class ProfileCreation(models.Model):
     AREAS = (
-        ('', 'Hududingizni tanlang'),
-        ('hudud1', 'hudud1'),
-        ('hudud2', 'hudud2'),
-        ('hudud3', 'hudud3'),
+        ('', _('Hududingizni tanlang')),
+        ('hudud1', _('hudud1')),
+        ('hudud2', _('hudud2')),
+        ('hudud3', _('hudud3')),
     )
     CITIES = (
-        ('', 'Shahar/tumaningizni tanlang'),
-        ('Buxoro', 'Buxoro'),
-        ('Toshkent', 'Toshkent'),
-        ('Samarqand', 'Samarqand'),
+        ('', _('Shahar/tumaningizni tanlang')),
+        ('Buxoro', _('Buxoro')),
+        ('Toshkent', _('Toshkent')),
+        ('Samarqand', _('Samarqand')),
     )
     SCHOOLS = (
-        ('', 'Maktabingizni tanlang'),
-        ('maktab1', 'maktab1'),
-        ('maktab2', 'maktab2'),
-        ('maktab3', 'maktab3'),
+        ('', _('Maktabingizni tanlang')),
+        ('maktab1', _('maktab1')),
+        ('maktab2', _('maktab2')),
+        ('maktab3', _('maktab3')),
 
     )
     GRADES = (
-        ('', 'Sinfingizni tanlang'),
-        ('sinf1', 'sinf1'),
-        ('sinf2', 'sinf2'),
-        ('sinf3', 'sinf3'),
+        ('', _('Sinfingizni tanlang')),
+        ('sinf1', _('sinf1')),
+        ('sinf2', _('sinf2')),
+        ('sinf3', _('sinf3')),
     )
     fullname = models.CharField(max_length=100)
     login = models.CharField(max_length=100, blank=True, null=True)  # assigning User->username
@@ -43,5 +44,5 @@ class ProfileCreation(models.Model):
         return str(self.fullname)
 
     class Meta:
-        verbose_name = 'Profile'
-        verbose_name_plural = 'Profiles'
+        verbose_name = _('Profile')
+        verbose_name_plural = _('Profiles')

@@ -3,7 +3,7 @@ from about.models import About
 from .forms import ProfileCreationForm, ProfileDetailForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
-
+from django.utils.translation import ugettext_lazy as _
 
 # SIGN UP
 def justreg(request):
@@ -43,9 +43,9 @@ def user_login(request):
                 login(request, user)
                 return redirect('main')
             else:
-                return HttpResponse("Your account was inactive.")
+                return HttpResponse(_("Sizning akkauntingiz bloklangan."))
         else:
-            return HttpResponse("Invalid login details given")
+            return HttpResponse(_("Noto'g'ri kirish tafsilotlari berildi"))
     else:
         return render(request, 'accounts/login.html', {'company': company})
 

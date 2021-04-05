@@ -1,13 +1,13 @@
 {% extends 'accounts/base.html' %}
 {% load static %}
 {% load crispy_forms_tags %}
-
+{% load i18n %}
 {% block title %}Login Page{% endblock %}
 
 {% block body %}
     {% if user.is_authenticated %}
         <div class="container">
-            <h2>Please, logout first!</h2>
+            <h2>{% trans 'Iltimos avval akkauntdan chiqing.'%}</h2>
         </div>
     {% else %}
 
@@ -18,7 +18,7 @@
                 {% csrf_token %}
 
                         <div class="form-group mr-4">
-                            <label for="login_label">Login
+                            <label for="login_label">{% trans 'Login' %}
                                 <input type="text" name="username" id="login_label" class="form-control"
                                        placeholder="Loginingizni kiriting">
                             </label>
@@ -26,14 +26,14 @@
 
                         <div class="form-group">
 
-                            <label for="password_label">Parol
+                            <label for="password_label">{% trans 'Parol' %}
                                 <input type="password" name="password" id="password_label" class="form-control"
                                        placeholder="Parolingizni kiriting">
                             </label>
 
 
                         </div>
-                        <button type="submit" class="btn btn-info">Kirish</button>
+                        <button type="submit" class="btn btn-info">{% trans 'Kirish' %}</button>
 
             </form>
 

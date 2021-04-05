@@ -1,5 +1,5 @@
 {% extends 'accounts/base.html' %}
-{% load static %}
+{% load static i18n %}
 {% load crispy_forms_tags %}
 
 {% block title %}Index{% endblock %}
@@ -30,8 +30,8 @@
     <br>
     <br>
     {% if user.is_authenticated %}
-        User: {{ user }}
+        {% blocktrans %} Foydalanuvchi: {{ user }} {% endblocktrans %}
     {% else %}
-        Not logged in!
+        {% trans "Registratsiyadan o'tmagan foydalanuvchi" %}
     {% endif %}
 {% endblock %}

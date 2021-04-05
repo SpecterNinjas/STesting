@@ -3,6 +3,7 @@ from django.core.exceptions import ValidationError
 from .models import ProfileCreation
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
+from django.utils.translation import ugettext_lazy as _
 
 
 class ProfileCreationForm(UserCreationForm):
@@ -11,9 +12,9 @@ class ProfileCreationForm(UserCreationForm):
         fields = ['username', 'password1', 'password2']
 
         labels = {
-            'username': 'Login',
-            'password1': 'Parol',
-            'password2': 'Tasdiqlang',
+            'username': _('Login'),
+            'password1': _('Parol'),
+            'password2': _('Tasdiqlang'),
         }
         # labels = {
         #     'fullname': 'Ism va familiya',
@@ -50,10 +51,10 @@ class ProfileDetailForm(forms.ModelForm):
         model = ProfileCreation
         fields = ['fullname', 'phone', 'area', 'city', 'school', 'grade']
         labels = {
-            'fullname': 'Ism va familiya',
-            'phone': 'Telefon raqam',
-            'area': 'Hudud',
-            'city': 'Shahar/tuman',
-            'school': 'Maktab',
-            'grade': 'Sinf',
+            'fullname': _('Ism va familiya'),
+            'phone': _('Telefon raqam'),
+            'area': _('Hudud'),
+            'city': _('Shahar/tuman'),
+            'school': _('Maktab'),
+            'grade': _('Sinf'),
         }

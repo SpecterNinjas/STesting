@@ -1,4 +1,6 @@
 from django.db import models
+from django.utils.translation import ugettext_lazy as _
+
 
 
 class About(models.Model):
@@ -14,5 +16,5 @@ class About(models.Model):
     twitter = models.URLField(max_length=200)
 
     class Meta:
-        verbose_name = 'Company Details'
-        verbose_name_plural = 'Company Details'
+        verbose_name = _('Company Details')
+        verbose_name_plural = _('Company Details')

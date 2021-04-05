@@ -1,11 +1,11 @@
 from django.db import models
-
+from django.utils.translation import ugettext_lazy as _
 
 class Research(models.Model):
 
     PUB_TYPES = (
-        ('international', 'international'),
-        ('national', 'national'),
+        ('international', _('international')),
+        ('national', _('national')),
     )
 
     title = models.CharField(max_length=700)
@@ -21,6 +21,6 @@ class Research(models.Model):
         return str(self.title)
 
     class Meta:
-        verbose_name = 'Research'
-        verbose_name_plural = 'Researches'
+        verbose_name = _('Research')
+        verbose_name_plural = _('Researches')
 
