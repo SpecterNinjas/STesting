@@ -1,0 +1,82 @@
+{% load static %}
+
+
+
+
+{% for field in company %}
+
+<!-- Footer -->
+<footer class="bg-dark text-center text-white">
+    <!-- Grid container -->
+    <div class="container p-4">
+        <!-- Section: Social media -->
+        <section class="mb-4">
+
+            <!-- Twitter -->
+            <a class="btn btn-outline-light btn-floating m-1" href="{{ field.twitter }}" role="button"
+            ><i class="fa fa-twitter"></i
+            ></a>
+
+            <!-- Facebook -->
+            <a class="btn btn-outline-light btn-floating m-1" href="{{ field.facebook }}" role="button"
+            ><i class="fa fa-facebook-f"></i
+            ></a>
+
+
+            <!-- telegram -->
+            <a class="btn btn-outline-light btn-floating m-1" href="{{ field.telegram }}" role="button"
+            ><i class="fa fa-telegram"></i
+            ></a>
+
+            <!-- Instagram -->
+            <a class="btn btn-outline-light btn-floating m-1" href="{{ field.instagram }}" role="button"
+            ><i class="fa fa-instagram"></i
+            ></a>
+
+        </section>
+        <!-- Section: Social media -->
+
+
+        <!-- Section: Text -->
+        <section class="mb-4">
+            <p>
+                {{ field.company_description }}
+            </p>
+        </section>
+        <!-- Section: Text -->
+
+        <!-- Section: Links -->
+        <section class="text-left">
+            <!--Grid row-->
+
+                    <h5 class="text-capitalize">Bog'lanish</h5>
+
+                    <ul class="list-unstyled mb-0">
+                        <li>
+                            Manzil: {{ field.address }}
+                        </li>
+                        <li>
+                            Elektron Pochta: {{ field.email }}
+                        </li>
+                        <li>
+                            Telefon Raqam: {{ field.phone }}
+                        </li>
+
+                    </ul>
+
+            <!--Grid row-->
+        </section>
+        <!-- Section: Links -->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2021 Copyright:
+        <a class="text-white" href="{% url 'main' %}">STesting.uz</a>
+    </div>
+    <!-- Copyright -->
+</footer>
+<!-- Footer -->
+
+{% endfor %}

@@ -1,0 +1,61 @@
+{% extends 'accounts/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block title %}Videodarslar{% endblock %}
+{% block css_link %}
+    <link rel="stylesheet" href="{% static 'researches/researches.css' %}">
+{% endblock %}
+
+
+{% block body %}
+    <div class="container">
+        {% if all_video %}
+            <div class="research pt-4">
+                <h4>Videodarslar</h4>
+                <p class="text-secondary">Xalqaro va milliy baholash videodarslardan boxabar bo'ling</p>
+
+                <form action="{% url 'researches:researches' %}" method="GET">
+                    <ul class="list-inline">
+
+                        <li class="list-inline-item">
+                            <button class="active_filter li_button">O‘quvchilar uchun</button>
+                        </li>
+
+                        <li class="list-inline-item">
+                            <button class="not_active_filter li_button">O‘qituvchilar uchun</button>
+                        </li>
+                        <li class="list-inline-item">
+                            <button class="not_active_filter li_button">Ota-onalar uchun</button>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+
+            <div class="research-details">
+                <div class="row">
+                    {% for video in all_video %}
+                        <figure class="figure">
+                            <img src="{{ video.video.url }}"
+                                 style="height: 230px; width: 250px;"
+                                 class="figure-img img-fluid rounded"
+                                 alt="video image">
+
+                            <figcaption class="figure-caption">
+                                <p class="font-weight-bold text-dark" style="font-size:16px;">{{ video.title }}</p>
+                                <p style="font-size:14px;"><i class="fa fa-eye"
+                                                              aria-hidden="true"></i> {{ video.watch_count }} &nbsp;&nbsp;&nbsp;<i
+                                        class="fa fa-calendar" aria-hidden="true"></i> {{ video.created }} &nbsp;&nbsp;&nbsp;<strong>{{ video.assessment_type }}</strong></p>
+                            </figcaption>
+                        </figure>
+                    {% endfor %}
+                </div>
+
+
+            </div>
+        {% else %}
+            <h3>Tadqiqotlar to'plami mavjud emas.</h3>
+        {% endif %}
+    </div>
+
+{% endblock %}

@@ -10,34 +10,41 @@
             <h2>Please, logout first!</h2>
         </div>
     {% else %}
+
         <div class="container pt-5">
-            <form action="" method="POST" autocomplete="off">
+
+            <form action="" method="POST" autocomplete="off" style="width: 300px;
+    margin: 0 auto;">
                 {% csrf_token %}
 
-                <div class="row">
+                        <div class="form-group mr-4">
+                            <label for="login_label">Login
+                                <input type="text" name="username" id="login_label" class="form-control"
+                                       placeholder="Loginingizni kiriting">
+                            </label>
+                        </div>
 
-                    <div class="form-group mr-4">
-                        <label for="login_label">Login
-                            <input type="text" name="username" id="login_label" class="form-control"
-                                   placeholder="Loginingizni kiriting">
-                        </label>
-                    </div>
+                        <div class="form-group">
 
-                    <div class="form-group">
-
-                        <label for="password_label">Parol
-                            <input type="password" name="password" id="password_label" class="form-control"
-                                   placeholder="Parolingizni kiriting">
-                        </label>
+                            <label for="password_label">Parol
+                                <input type="password" name="password" id="password_label" class="form-control"
+                                       placeholder="Parolingizni kiriting">
+                            </label>
 
 
-                    </div>
-                </div>
-                <button type="submit" class="btn btn-info">Kirish</button>
-
+                        </div>
+                        <button type="submit" class="btn btn-info">Kirish</button>
 
             </form>
+
         </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
     {% endif %}
 
 {% endblock %}

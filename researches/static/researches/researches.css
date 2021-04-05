@@ -1,0 +1,45 @@
+.research {
+    background-color: rgb(248, 251, 255);
+    margin-top: 15px;
+    padding: 30px;
+
+}
+
+.research > h4 {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.research > p {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.active_filter {
+    background-color: rgb(79, 149, 255);
+    color: white;
+}
+
+.li_button {
+    height: 45px;
+    width: 190px;
+    left: 24px;
+    top: 133px;
+    border-radius: 0;
+    border-color: inherit;
+}
+
+.not_active_filter {
+    background-color: rgb(225, 237, 255);
+    color: rgb(162, 199, 255);
+}
+
+.figure {
+    margin-top: 20px;
+    margin-right: 25px;
+    margin-left: 10px;
+}
+
+.figure-caption {
+    max-width: 250px;
+}

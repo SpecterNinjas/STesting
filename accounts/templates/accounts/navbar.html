@@ -1,0 +1,42 @@
+{% load static %}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="{% url 'main' %}">STesting</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto px-4">
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'main' %}">STesting Loyihasi Haqida <span
+                        class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'researches:researches' %}">Tadqiqotlar</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'videos:videos' %}">Videodarsliklar</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Yo'riqnoma</a>
+            </li>
+             <li class="nav-item">
+                <a class="nav-link" href="{% url 'publications:publications' %}">Nashrlar</a>
+            </li>
+        </ul>
+        {% if user.is_authenticated %}
+         <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'accounts:logout' %}">Logout</a>
+            </li>
+        </ul>
+        {% else %}
+           <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'accounts:login' %}">Kirish</a>
+            </li>
+        </ul>
+        {% endif %}
+    </div>
+</nav>

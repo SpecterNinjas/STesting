@@ -1,5 +1,5 @@
 from django.shortcuts import render, HttpResponse, redirect
-from .models import ProfileCreation
+from about.models import About
 from .forms import ProfileCreationForm, ProfileDetailForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
@@ -7,6 +7,7 @@ from django.contrib.auth import authenticate, login, logout
 
 # SIGN UP
 def justreg(request):
+    company = About.objects.all()
     if request.method == 'POST':
         form1 = ProfileCreationForm(request.POST)
         form2 = ProfileDetailForm(request.POST)
@@ -24,13 +25,15 @@ def justreg(request):
 
     context = {
         'form1': form1,
-        'form2': form2
+        'form2': form2,
+        'company': company
     }
     return render(request, 'accounts/register1.html', context)
 
 
 # SIGN IN
 def user_login(request):
+    company = About.objects.all()
     if request.method == 'POST':
         username = request.POST.get('username')
         password = request.POST.get('password')
@@ -42,17 +45,17 @@ def user_login(request):
             else:
                 return HttpResponse("Your account was inactive.")
         else:
-            print("Someone tried to login and failed.")
-            print("They used username: {} and password: {}".format(username, password))
             return HttpResponse("Invalid login details given")
     else:
-        return render(request, 'accounts/login.html', {})
+        return render(request, 'accounts/login.html', {'company': company})
 
 
 def main(request):
-    return render(request, 'accounts/main.html')
+    company = About.objects.all()
+    return render(request, 'accounts/main.html', {'company': company})
 
 
 @login_required
 def user_logout(request):
     logout(request)
+    return redirect('main')
