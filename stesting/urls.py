@@ -22,17 +22,9 @@ from . import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('accounts/', include('accounts.urls')),
-    path('researches/', include('researches.urls')),
-    path('videos/', include('videos.urls')),
-    path('publications/', include('publications.urls')),
-    path('', acc_views.main, name='main'),
 ]
 
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
 urlpatterns += i18n_patterns(
-    path('admin/', admin.site.urls),
     path('accounts/', include('accounts.urls')),
     path('researches/', include('researches.urls')),
     path('videos/', include('videos.urls')),
@@ -40,3 +32,6 @@ urlpatterns += i18n_patterns(
     path('', acc_views.main, name='main'),
 
 )
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

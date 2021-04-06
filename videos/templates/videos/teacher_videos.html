@@ -62,12 +62,12 @@
             <div class="page-links">
                 {% if page.has_previous %}
                     <button class="btn btn-outline-info"><a class="font-weight-bold mx-3 text-decoration-none"
-                                                            href="{% url 'researches:researches' %}?page={{ page.previous_page_number }}">{% trans 'Oldingi' %}
+                                                            href="{% url 'videos:teachers_videos' %}?page={{ page.previous_page_number }}">{% trans 'Oldingi' %}
                     </a></button>
                 {% endif %}
                 {% if page.has_next %}
                     <button class="btn btn-outline-info"><a class="font-weight-bold text-decoration-none"
-                                                            href="{% url 'researches:researches' %}?page={{ page.next_page_number }}">{% trans 'Keyingi' %}
+                                                            href="{% url 'videos:teachers_videos' %}?page={{ page.next_page_number }}">{% trans 'Keyingi' %}
                     </a>
                     </button>
                 {% endif %}
