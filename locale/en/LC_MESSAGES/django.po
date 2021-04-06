@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-06 10:47+0500\n"
+"POT-Creation-Date: 2021-04-06 15:33+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\about\models.py:19 .\about\models.py:20
+#: .\about\models.py:18 .\about\models.py:19
 msgid "Company Details"
 msgstr ""
 
@@ -151,14 +151,9 @@ msgid "Iltimos avval akkauntdan chiqing."
 msgstr "Please exit your account first."
 
 #: .\accounts\templates\accounts\login.html:36
-#: .\accounts\templates\accounts\navbar.html:37
+#: .\accounts\templates\accounts\navbar.html:56
 msgid "Kirish"
 msgstr "Login"
-
-#: .\accounts\templates\accounts\main.html:33
-#, python-format
-msgid " Foydalanuvchi: %(user)s "
-msgstr ""
 
 #: .\accounts\templates\accounts\main.html:35
 #, fuzzy
@@ -202,7 +197,11 @@ msgstr "Publications"
 msgid "Chiqish"
 msgstr "Logout"
 
-#: .\accounts\templates\accounts\navbar.html:40
+#: .\accounts\templates\accounts\navbar.html:39
+msgid "Language"
+msgstr "Language"
+
+#: .\accounts\templates\accounts\navbar.html:59
 #: .\accounts\templates\accounts\register1.html:5
 msgid "Ro'yxatdan o'tish"
 msgstr "Sign Up"
@@ -317,12 +316,6 @@ msgstr "A set of researches is not available."
 msgid "Nashr Tasviri"
 msgstr "Publications"
 
-#: .\publications\templates\publications\nashrlar.html:48
-#: .\publications\templates\publications\national_nashr.html:47
-#, python-format
-msgid "%(publication.description)s"
-msgstr ""
-
 #: .\researches\models.py:24
 msgid "Research"
 msgstr ""
@@ -331,15 +324,15 @@ msgstr ""
 msgid "Researches"
 msgstr ""
 
-#: .\stesting\settings.py:115
+#: .\stesting\settings.py:117
 msgid "English"
 msgstr ""
 
-#: .\stesting\settings.py:116
+#: .\stesting\settings.py:118
 msgid "Русский"
 msgstr ""
 
-#: .\stesting\settings.py:117 .\stesting\settings.py:125
+#: .\stesting\settings.py:119 .\stesting\settings.py:127
 msgid "O'zbek"
 msgstr ""
 

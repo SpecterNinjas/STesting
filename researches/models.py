@@ -1,8 +1,8 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
-class Research(models.Model):
 
+class Research(models.Model):
     PUB_TYPES = (
         ('international', _('international')),
         ('national', _('national')),
@@ -23,4 +23,3 @@ class Research(models.Model):
     class Meta:
         verbose_name = _('Research')
         verbose_name_plural = _('Researches')
-

@@ -7,7 +7,7 @@ company = About.objects.all()
 
 
 def researches(request):
-    all_research = Research.objects.all()
+    all_research = Research.objects.all().order_by('-created')
     research_paginator = Paginator(all_research, 2)
     page_num = request.GET.get('page')
     page = research_paginator.get_page(page_num)
@@ -21,7 +21,7 @@ def researches(request):
 
 def inter_researches(request):
 
-    all_research = Research.objects.filter(research_type='international')
+    all_research = Research.objects.filter(research_type='international').order_by('-created')
     research_paginator = Paginator(all_research, 2)
     page_num = request.GET.get('page')
     page = research_paginator.get_page(page_num)
@@ -35,7 +35,7 @@ def inter_researches(request):
 
 def national_researches(request):
 
-    all_research = Research.objects.filter(research_type='national')
+    all_research = Research.objects.filter(research_type='national').order_by('-created')
     research_paginator = Paginator(all_research, 2)
     page_num = request.GET.get('page')
     page = research_paginator.get_page(page_num)

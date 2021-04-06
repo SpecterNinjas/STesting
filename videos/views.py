@@ -7,8 +7,8 @@ company = About.objects.all()
 
 
 def videos(request):
-    all_video = Video.objects.all()
-    video_paginator = Paginator(all_video, 1)
+    all_video = Video.objects.all().order_by('-created')
+    video_paginator = Paginator(all_video, 2)
     num = request.GET.get('page')
     page = video_paginator.get_page(num)
 
@@ -21,7 +21,7 @@ def videos(request):
 
 
 def student_videos(request):
-    all_video = Video.objects.filter(video_type='students')
+    all_video = Video.objects.filter(video_type='students').order_by('-created')
     video_paginator = Paginator(all_video, 2)
     num = request.GET.get('page')
     page = video_paginator.get_page(num)
@@ -35,7 +35,7 @@ def student_videos(request):
 
 
 def teacher_videos(request):
-    all_video = Video.objects.filter(video_type='teachers')
+    all_video = Video.objects.filter(video_type='teachers').order_by('-created')
     video_paginator = Paginator(all_video, 2)
     num = request.GET.get('page')
     page = video_paginator.get_page(num)
@@ -49,7 +49,7 @@ def teacher_videos(request):
 
 
 def parents_videos(request):
-    all_video = Video.objects.filter(video_type='parents')
+    all_video = Video.objects.filter(video_type='parents').order_by('-created')
     video_paginator = Paginator(all_video, 2)
     num = request.GET.get('page')
     page = video_paginator.get_page(num)

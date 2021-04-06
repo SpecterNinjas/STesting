@@ -7,7 +7,7 @@ company = About.objects.all()
 
 
 def publications(request):
-    all_publications = Publications.objects.all()
+    all_publications = Publications.objects.all().order_by('-created')
     publication_paginator = Paginator(all_publications, 2)
     page_num = request.GET.get('page')
     page = publication_paginator.get_page(page_num)
@@ -21,7 +21,7 @@ def publications(request):
 
 
 def international_publications(request):
-    all_publications = Publications.objects.filter(pub_type='international')
+    all_publications = Publications.objects.filter(pub_type='international').order_by('-created')
     publication_paginator = Paginator(all_publications, 2)
     page_num = request.GET.get('page')
     page = publication_paginator.get_page(page_num)
@@ -35,7 +35,7 @@ def international_publications(request):
 
 
 def national_publications(request):
-    all_publications = Publications.objects.filter(pub_type='national')
+    all_publications = Publications.objects.filter(pub_type='national').order_by('-created')
     publication_paginator = Paginator(all_publications, 2)
     page_num = request.GET.get('page')
     page = publication_paginator.get_page(page_num)

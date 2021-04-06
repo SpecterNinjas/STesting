@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-06 10:47+0500\n"
+"POT-Creation-Date: 2021-04-06 15:33+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: .\about\models.py:19 .\about\models.py:20
+#: .\about\models.py:18 .\about\models.py:19
 msgid "Company Details"
 msgstr ""
 
@@ -150,14 +150,9 @@ msgid "Iltimos avval akkauntdan chiqing."
 msgstr "Iltimos avval akkauntdan chiqing."
 
 #: .\accounts\templates\accounts\login.html:36
-#: .\accounts\templates\accounts\navbar.html:37
+#: .\accounts\templates\accounts\navbar.html:56
 msgid "Kirish"
 msgstr "Kirish"
-
-#: .\accounts\templates\accounts\main.html:33
-#, python-format
-msgid " Foydalanuvchi: %(user)s "
-msgstr ""
 
 #: .\accounts\templates\accounts\main.html:35
 msgid "Registratsiyadan o'tmagan foydalanuvchi"
@@ -199,7 +194,11 @@ msgstr "Nashrlar"
 msgid "Chiqish"
 msgstr "Chiqish"
 
-#: .\accounts\templates\accounts\navbar.html:40
+#: .\accounts\templates\accounts\navbar.html:39
+msgid "Language"
+msgstr "Til"
+
+#: .\accounts\templates\accounts\navbar.html:59
 #: .\accounts\templates\accounts\register1.html:5
 msgid "Ro'yxatdan o'tish"
 msgstr "Ro'yxatdan o'tish"
@@ -312,12 +311,6 @@ msgstr "Tadqiqotlar to'plami mavjud emas."
 msgid "Nashr Tasviri"
 msgstr "Nashr Tasviri"
 
-#: .\publications\templates\publications\nashrlar.html:48
-#: .\publications\templates\publications\national_nashr.html:47
-#, python-format
-msgid "%(publication.description)s"
-msgstr ""
-
 #: .\researches\models.py:24
 msgid "Research"
 msgstr ""
@@ -326,15 +319,15 @@ msgstr ""
 msgid "Researches"
 msgstr ""
 
-#: .\stesting\settings.py:115
+#: .\stesting\settings.py:117
 msgid "English"
 msgstr "Ingliz"
 
-#: .\stesting\settings.py:116
+#: .\stesting\settings.py:118
 msgid "Русский"
 msgstr "Rus"
 
-#: .\stesting\settings.py:117 .\stesting\settings.py:125
+#: .\stesting\settings.py:119 .\stesting\settings.py:127
 msgid "O'zbek"
 msgstr "O'zbek"
 
