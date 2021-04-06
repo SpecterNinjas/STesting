@@ -38,5 +38,5 @@ urlpatterns += i18n_patterns(
     path('videos/', include('videos.urls')),
     path('publications/', include('publications.urls')),
     path('', acc_views.main, name='main'),
-    prefix_default_language=False
+
 )

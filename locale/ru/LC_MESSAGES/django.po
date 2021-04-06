@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-05 19:53+0500\n"
+"POT-Creation-Date: 2021-04-06 10:47+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -132,11 +132,6 @@ msgstr "Профиль"
 msgid "Profiles"
 msgstr "Профили"
 
-#: .\accounts\templates\accounts\footer.html:44
-#, python-format
-msgid " %(field.company_description)s "
-msgstr ""
-
 #: .\accounts\templates\accounts\footer.html:54
 msgid "Bog'lanish"
 msgstr "Связаться с нами"
@@ -220,11 +215,11 @@ msgstr "Пожалуйста, выйдите из своей учетной за
 msgid "Davom ettirish"
 msgstr "Продолжить"
 
-#: .\accounts\views.py:46
+#: .\accounts\views.py:48
 msgid "Sizning akkauntingiz bloklangan."
 msgstr ""
 
-#: .\accounts\views.py:48
+#: .\accounts\views.py:50
 msgid "Noto'g'ri kirish tafsilotlari berildi"
 msgstr "Ваш аккаунт заблокирован."
 
@@ -334,16 +329,18 @@ msgstr ""
 msgid "Researches"
 msgstr "Исследование"
 
-#: .\stesting\settings.py:112
+#: .\stesting\settings.py:115
 msgid "English"
 msgstr "Английский"
 
-#: .\stesting\settings.py:113
-msgid "Russian"
-msgstr "Русский"
+#: .\stesting\settings.py:116
+msgid "Русский"
+msgstr ""
 
-#: .\stesting\settings.py:114
-msgid "Uzbek"
+#: .\stesting\settings.py:117 .\stesting\settings.py:125
+#, fuzzy
+#| msgid "Uzbek"
+msgid "O'zbek"
 msgstr "Узбекский"
 
 #: .\videos\models.py:7
@@ -423,3 +420,6 @@ msgstr "Для Родителей"
 #: .\videos\templates\videos\videos.html:76
 msgid "Videolar to'plami mavjud emas."
 msgstr "Коллекция видео новостей недоступна."
+
+#~ msgid "Russian"
+#~ msgstr "Русский"

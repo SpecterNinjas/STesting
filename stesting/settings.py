@@ -1,5 +1,8 @@
 import os
+
+from django.conf import global_settings
 from django.utils.translation import ugettext_lazy as _
+from django.conf import locale
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -110,9 +113,22 @@ LANGUAGE_CODE = 'en'
 
 LANGUAGES = (
     ('en', _('English')),
-    ('ru', _('Russian')),
-    ('uz', _('Uzbek')),
+    ('ru', _('Русский')),
+    ('uz', _("O'zbek")),
 )
+
+EXTRA_LANG_INFO = {
+    'uz': {
+        'bidi': False,
+        'code': 'uz',
+        'name': 'Uzbek',
+        'name_local': _("O'zbek"),
+
+    },
+}
+# Add custom languages not provided by Django
+LANG_INFO = dict(locale.LANG_INFO, **EXTRA_LANG_INFO)
+locale.LANG_INFO = LANG_INFO
 
 TIME_ZONE = 'UTC'
 

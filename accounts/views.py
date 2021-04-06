@@ -1,13 +1,16 @@
 from django.shortcuts import render, HttpResponse, redirect
+from django.utils.translation import ugettext as _
+
 from about.models import About
 from .forms import ProfileCreationForm, ProfileDetailForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
-from django.utils.translation import ugettext_lazy as _
+
+company = About.objects.all()
+
 
 # SIGN UP
 def justreg(request):
-    company = About.objects.all()
     if request.method == 'POST':
         form1 = ProfileCreationForm(request.POST)
         form2 = ProfileDetailForm(request.POST)
@@ -33,7 +36,6 @@ def justreg(request):
 
 # SIGN IN
 def user_login(request):
-    company = About.objects.all()
     if request.method == 'POST':
         username = request.POST.get('username')
         password = request.POST.get('password')
@@ -51,7 +53,6 @@ def user_login(request):
 
 
 def main(request):
-    company = About.objects.all()
     return render(request, 'accounts/main.html', {'company': company})
 
 
