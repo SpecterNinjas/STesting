@@ -1,0 +1,184 @@
+{% extends "admin/base_site.html" %}
+
+{% load i18n static %}
+
+
+{% block css_link %}
+    <link rel="icon" type="image/png" href="{% static 'accounts/images/icons/favicon.ico' %}"/>
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'accounts/vendor/bootstrap/css/bootstrap.min.css' %}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css"
+          href="{% static 'accounts/fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'accounts/vendor/animate/animate.css' %}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'accounts/vendor/css-hamburgers/hamburgers.min.css' %}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'accounts/vendor/select2/select2.min.css' %}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'accounts/css/util.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'accounts/css/main.css' %}">
+{% endblock %}
+
+{% block extrastyle %}{{ block.super }}
+    <link rel="stylesheet" type="text/css" href="{% static " admin/css/login.css" %}">
+    {{ form.media }}
+{% endblock %}
+
+{% block bodyclass %}{{ block.super }} login{% endblock %}
+
+{% block usertools %}{% endblock %}
+
+{% block nav-global %}{% endblock %}
+
+{% block nav-sidebar %}{% endblock %}
+
+{% block content_title %}{% endblock %}
+
+{% block breadcrumbs %}{% endblock %}
+
+{% block content %}
+    {% if form.errors and not form.non_field_errors %}
+        <p class="errornote">
+            {% if form.errors.items|length == 1 %}{% trans "Please correct the error below." %}{% else %}
+                {% trans "Please correct the errors below." %}
+            {% endif %}
+        </p>
+    {% endif %}
+
+    {% if form.non_field_errors %}
+        {% for error in form.non_field_errors %}
+            <p class="errornote">
+                {{ error }}
+            </p>
+        {% endfor %}
+    {% endif %}
+
+    <div id="content-main" style="height: 100vh;">
+
+        {% if user.is_authenticated %}
+            <p class="errornote">
+                {% blocktrans trimmed %}
+                    You are authenticated as {{ username }}, but are not authorized to
+                    access this page. Would you like to login to a different account?
+                {% endblocktrans %}
+            </p>
+        {% endif %}
+
+        {#        <form action="{{ app_path }}" method="post" id="login-form">{% csrf_token %}#}
+        {##}
+        {#            <div class="form-row">#}
+        {#                {{ form.username.errors }}#}
+        {#                {{ form.username.label_tag }} {{ form.username }}#}
+        {#            </div>#}
+        {#            <div class="form-row">#}
+        {#                {{ form.password.errors }}#}
+        {#                {{ form.password.label_tag }} {{ form.password }}#}
+        {#                <input type="hidden" name="next" value="{{ next }}">#}
+        {#            </div>#}
+        {#            {% url 'admin_password_reset' as password_reset_url %}#}
+        {#            {% if password_reset_url %}#}
+        {#                <div class="password-reset-link">#}
+        {#                    <a href="{{ password_reset_url }}">{% trans 'Forgotten your password or username?' %}</a>#}
+        {#                </div>#}
+        {#            {% endif %}#}
+        {#            <div class="submit-row">#}
+        {#                <input type="submit" value="{% trans 'Log in' %}">#}
+        {#            </div>#}
+        {#        </form>#}
+
+
+        <div class="limiter" style="width: 100%">
+            <div class="container-login100" style="background: white;">
+                <div class="wrap-login100" style="border: 1px solid lightgrey;
+  box-shadow: 5px 10px 18px #888888;">
+
+                <div class="login100-pic js-tilt" data-tilt>
+                    <img src="{% static 'accounts/images/img-01.png' %}" alt="IMG">
+                </div>
+
+                <form class="login100-form validate-form" autocomplete="off" method="POST" action="{{ app_path }}"
+                      id="login-form">
+                    {% csrf_token %}
+                    <span class="login100-form-title">
+						{% trans "Member Login" %}
+					</span>
+
+                    <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+                        <input class="input100" type="text" id="id_username" name="username"
+                               placeholder="{% trans 'Username' %}" style="padding-left: 30px;" required>
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100" style="padding-left: 10px;">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input" data-validate="Password is required">
+                        <input class="input100" type="password" name="password" required id="id_password"
+                               placeholder="{% trans 'Password' %}" style="padding-left: 30px;">
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100" style="padding-left: 10px;">
+							<i class="fa fa-lock" style="font-size: 1.3em;" aria-hidden="true"></i>
+						</span>
+                    </div>
+                    <div class="wrap-input100">
+                        <input type="hidden" name="next" value="{{ next }}">
+                    </div>
+
+                    <div class="container-login100-form-btn">
+                        <button class="login100-form-btn" type="submit">
+                            Login
+                        </button>
+                    </div>
+
+                    {% url 'admin_password_reset' as password_reset_url %}
+                    {% if password_reset_url %}
+
+
+                        <div class="text-center p-t-12">
+                            {#						<span class="txt1">#}
+                            {#							Forgot#}
+                            {#						</span>#}
+                            {#                                <a class="txt2" href="#">#}
+                            {#                                    Username / Password?#}
+                            {#                                </a>#}
+                            <div class="password-reset-link">
+                                <a href="{{ password_reset_url }}">{% trans 'Forgotten your password or username?' %}</a>
+                            </div>
+                        </div>
+                    {% endif %}
+                    <div class="text-center p-t-136">
+                        <a class="txt2" href="{% url 'accounts:register' %}">
+                            {% trans 'Create your Account' %}
+                            <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+{% endblock %}
+
+
+{% block js_code %}
+    <script src="{% static 'accounts/vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+    <!--===============================================================================================-->
+    <script src="{% static 'accounts/vendor/bootstrap/js/popper.js' %}"></script>
+
+    <script src="{% static 'accounts/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+    <!--===============================================================================================-->
+    <script src="{% static 'accounts/vendor/select2/select2.min.js' %}"></script>
+    <!--===============================================================================================-->
+    <script src="{% static 'accounts/vendor/tilt/tilt.jquery.min.js' %}"></script>
+    <script>
+        $('.js-tilt').tilt({
+            scale: 1.1
+        })
+    </script>
+    <!--===============================================================================================-->
+    <script src="{% static 'accounts/js/main.js' %}"></script>
+{% endblock %}

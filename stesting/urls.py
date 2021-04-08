@@ -20,11 +20,8 @@ from accounts import views as acc_views
 from django.contrib.staticfiles.urls import static
 from . import settings
 
-urlpatterns = [
+urlpatterns = i18n_patterns(
     path('admin/', admin.site.urls),
-]
-
-urlpatterns += i18n_patterns(
     path('accounts/', include('accounts.urls')),
     path('researches/', include('researches.urls')),
     path('videos/', include('videos.urls')),
