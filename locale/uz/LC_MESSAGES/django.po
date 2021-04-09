@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-09 15:06+0500\n"
+"POT-Creation-Date: 2021-04-09 15:54+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,11 +21,11 @@ msgstr ""
 msgid "Company Details"
 msgstr "Kompaniya Haqida"
 
-#: .\accounts\forms.py:15 .\accounts\templates\accounts\login.html:21
+#: .\accounts\forms.py:15 .\accounts\templates\accounts\login.html:20
 msgid "Login"
 msgstr "Kirish"
 
-#: .\accounts\forms.py:16 .\accounts\templates\accounts\login.html:29
+#: .\accounts\forms.py:16 .\accounts\templates\accounts\login.html:28
 msgid "Parol"
 msgstr "Parol"
 
@@ -33,27 +33,27 @@ msgstr "Parol"
 msgid "Tasdiqlang"
 msgstr "Tasdiqlang"
 
-#: .\accounts\forms.py:54
+#: .\accounts\forms.py:50
 msgid "Ism va familiya"
 msgstr "Ism va familiya"
 
-#: .\accounts\forms.py:55
+#: .\accounts\forms.py:51
 msgid "Telefon raqam"
 msgstr "Telefon raqam"
 
-#: .\accounts\forms.py:56
+#: .\accounts\forms.py:52
 msgid "Hudud"
 msgstr "Hudud"
 
-#: .\accounts\forms.py:57
+#: .\accounts\forms.py:53
 msgid "Shahar/tuman"
 msgstr "Shahar/tuman"
 
-#: .\accounts\forms.py:58
+#: .\accounts\forms.py:54
 msgid "Maktab"
 msgstr ""
 
-#: .\accounts\forms.py:59
+#: .\accounts\forms.py:55
 msgid "Sinf"
 msgstr ""
 
@@ -149,11 +149,25 @@ msgstr "Telefon Raqam:"
 msgid "Copyright"
 msgstr "Mualliflik huquqi"
 
-#: .\accounts\templates\accounts\login.html:10
+#: .\accounts\templates\accounts\login.html:4
+#, fuzzy
+#| msgid "Login"
+msgid "Login Page"
+msgstr "Kirish"
+
+#: .\accounts\templates\accounts\login.html:9
 msgid "Iltimos avval akkauntdan chiqing."
 msgstr "Iltimos avval akkauntdan chiqing."
 
-#: .\accounts\templates\accounts\login.html:36
+#: .\accounts\templates\accounts\login.html:22
+msgid "Loginingizni kiriting"
+msgstr ""
+
+#: .\accounts\templates\accounts\login.html:30
+msgid "Parolingizni kiriting"
+msgstr "Parolingizni kiriting"
+
+#: .\accounts\templates\accounts\login.html:35
 #: .\accounts\templates\accounts\navbar.html:75
 msgid "Kirish"
 msgstr "Kirish"

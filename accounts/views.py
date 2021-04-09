@@ -21,7 +21,12 @@ def justreg(request):
             form2_final.login = form1_final.username
             form2_final.save()
             form1_final.save()
-            return redirect('main')
+
+            # automatically logging in when user signed up successfully
+            user = authenticate(username=form1.cleaned_data['username'], password=form1.cleaned_data['password1'])
+            if user:
+                login(request, user)
+                return redirect('main')
     else:
         form1 = ProfileCreationForm()
         form2 = ProfileDetailForm()

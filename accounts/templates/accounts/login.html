@@ -1,13 +1,12 @@
 {% extends 'accounts/base.html' %}
-{% load static %}
+{% load static i18n %}
 {% load crispy_forms_tags %}
-{% load i18n %}
-{% block title %}Login Page{% endblock %}
+{% block title %}{% trans 'Login Page' %}{% endblock %}
 
 {% block body %}
     {% if user.is_authenticated %}
         <div class="container">
-            <h2>{% trans 'Iltimos avval akkauntdan chiqing.'%}</h2>
+            <h2>{% trans 'Iltimos avval akkauntdan chiqing.' %}</h2>
         </div>
     {% else %}
 
@@ -17,23 +16,23 @@
     margin: 0 auto;">
                 {% csrf_token %}
 
-                        <div class="form-group mr-4">
-                            <label for="login_label">{% trans 'Login' %}
-                                <input type="text" name="username" id="login_label" class="form-control"
-                                       placeholder="Loginingizni kiriting">
-                            </label>
-                        </div>
+                <div class="form-group mr-4">
+                    <label for="login_label">{% trans 'Login' %}
+                        <input type="text" name="username" id="login_label" class="form-control"
+                               placeholder="{% trans 'Loginingizni kiriting' %}">
+                    </label>
+                </div>
 
-                        <div class="form-group">
+                <div class="form-group">
 
-                            <label for="password_label">{% trans 'Parol' %}
-                                <input type="password" name="password" id="password_label" class="form-control"
-                                       placeholder="Parolingizni kiriting">
-                            </label>
+                    <label for="password_label">{% trans 'Parol' %}
+                        <input type="password" name="password" id="password_label" class="form-control"
+                               placeholder="{% trans 'Parolingizni kiriting' %}">
+                    </label>
 
 
-                        </div>
-                        <button type="submit" class="btn btn-info">{% trans 'Kirish' %}</button>
+                </div>
+                <button type="submit" class="btn btn-info">{% trans 'Kirish' %}</button>
 
             </form>
 

@@ -51,7 +51,7 @@
                                 <p class="font-weight-bold text-dark" style="font-size:16px;">{{ video.title }}</p>
                                 <p style="font-size:14px;"><i class="fa fa-eye"
                                                               aria-hidden="true"></i> {{ video.watch_count }} &nbsp;&nbsp;&nbsp;<i
-                                        class="fa fa-calendar" aria-hidden="true"></i> {{ video.created }} &nbsp;&nbsp;&nbsp;<strong>{{ video.assessment_type }}</strong>
+                                        class="fa fa-calendar" aria-hidden="true"></i> {{ video.created.day }}/{{ video.created.month }}/{{ video.created.year }} &nbsp;&nbsp;&nbsp;<strong>{{ video.assessment_type }}</strong>
                                 </p>
                             </figcaption>
                         </figure>

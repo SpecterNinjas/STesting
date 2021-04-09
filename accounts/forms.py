@@ -16,15 +16,14 @@ class ProfileCreationForm(UserCreationForm):
             'password1': _('Parol'),
             'password2': _('Tasdiqlang'),
         }
-        # labels = {
-        #     'fullname': 'Ism va familiya',
-        #     'login': 'Login',
-        #     'phone': 'Telefon raqam',
-        #     'area': 'Hudud',
-        #     'city': 'Shahar/tuman',
-        #     'school': 'Maktab',
-        #     'grade': 'Sinf',
-        # }
+
+    def __init__(self, *args, **kwargs):
+        super(ProfileCreationForm, self).__init__(*args, **kwargs)
+        self.fields['username'].help_text = ''
+        self.fields['password1'].help_text = ''
+        self.fields['password2'].help_text = ''
+
+
 
     # def clean_fullname(self):
     #     fullname = self.cleaned_data.get("fullname").strip()
