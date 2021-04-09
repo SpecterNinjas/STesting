@@ -25,6 +25,8 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
 
+    'modeltranslation',  # modeltranslation must be put before 'django.contrib.admin'
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -43,10 +45,11 @@ INSTALLED_APPS = [
     # Installations
     'crispy_forms',
 
-
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -110,12 +113,12 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
-LANGUAGE_CODE = 'en'
+LANGUAGE_CODE = 'uz'
 
 LANGUAGES = (
+    ('uz', _("O'zbek")),
     ('en', _('English')),
     ('ru', _('Русский')),
-    ('uz', _("O'zbek")),
 )
 
 EXTRA_LANG_INFO = {
@@ -130,6 +133,12 @@ EXTRA_LANG_INFO = {
 # Add custom languages not provided by Django
 LANG_INFO = dict(locale.LANG_INFO, **EXTRA_LANG_INFO)
 locale.LANG_INFO = LANG_INFO
+
+# MODELTRANSLATION_DEFAULT_LANGUAGE = 'uz'
+# MODELTRANSLATION_LANGUAGES = ('uz', 'en', 'ru')
+# MODELTRANSLATION_FALLBACK_LANGUAGES = ('uz', 'en', 'ru')
+
+
 
 TIME_ZONE = 'UTC'
 

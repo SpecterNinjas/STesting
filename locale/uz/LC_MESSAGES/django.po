@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-06 15:33+0500\n"
+"POT-Creation-Date: 2021-04-09 15:06+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: .\about\models.py:18 .\about\models.py:19
 msgid "Company Details"
-msgstr ""
+msgstr "Kompaniya Haqida"
 
 #: .\accounts\forms.py:15 .\accounts\templates\accounts\login.html:21
 msgid "Login"
@@ -51,63 +51,63 @@ msgstr "Shahar/tuman"
 
 #: .\accounts\forms.py:58
 msgid "Maktab"
-msgstr "Maktab"
+msgstr ""
 
 #: .\accounts\forms.py:59
 msgid "Sinf"
-msgstr "Sinf"
+msgstr ""
 
 #: .\accounts\models.py:8
 msgid "Hududingizni tanlang"
-msgstr "Hududingizni tanlang"
+msgstr ""
 
 #: .\accounts\models.py:9
 msgid "hudud1"
-msgstr "hudud1"
+msgstr ""
 
 #: .\accounts\models.py:10
 msgid "hudud2"
-msgstr "hudud2"
+msgstr ""
 
 #: .\accounts\models.py:11
 msgid "hudud3"
-msgstr "hudud3"
+msgstr ""
 
 #: .\accounts\models.py:14
 msgid "Shahar/tumaningizni tanlang"
-msgstr "Shahar/tumaningizni tanlang"
+msgstr ""
 
 #: .\accounts\models.py:15
 msgid "Buxoro"
-msgstr "Buxoro"
+msgstr ""
 
 #: .\accounts\models.py:16
 msgid "Toshkent"
-msgstr "Toshkent"
+msgstr ""
 
 #: .\accounts\models.py:17
 msgid "Samarqand"
-msgstr "Samarqand"
+msgstr ""
 
 #: .\accounts\models.py:20
 msgid "Maktabingizni tanlang"
-msgstr "Maktabingizni tanlang"
+msgstr ""
 
 #: .\accounts\models.py:21
 msgid "maktab1"
-msgstr "maktab1"
+msgstr ""
 
 #: .\accounts\models.py:22
 msgid "maktab2"
-msgstr "maktab2"
+msgstr ""
 
 #: .\accounts\models.py:23
 msgid "maktab3"
-msgstr "maktab3"
+msgstr ""
 
 #: .\accounts\models.py:27
 msgid "Sinfingizni tanlang"
-msgstr "Sinfingizni tanlang"
+msgstr ""
 
 #: .\accounts\models.py:28
 msgid "sinf1"
@@ -123,11 +123,11 @@ msgstr "sinf3"
 
 #: .\accounts\models.py:47
 msgid "Profile"
-msgstr ""
+msgstr "Profil"
 
 #: .\accounts\models.py:48
 msgid "Profiles"
-msgstr ""
+msgstr "Profillar"
 
 #: .\accounts\templates\accounts\footer.html:54
 msgid "Bog'lanish"
@@ -145,22 +145,34 @@ msgstr "Elektron Pochta:"
 msgid "Telefon Raqam:"
 msgstr "Telefon Raqam:"
 
+#: .\accounts\templates\accounts\footer.html:77
+msgid "Copyright"
+msgstr "Mualliflik huquqi"
+
 #: .\accounts\templates\accounts\login.html:10
 msgid "Iltimos avval akkauntdan chiqing."
 msgstr "Iltimos avval akkauntdan chiqing."
 
 #: .\accounts\templates\accounts\login.html:36
-#: .\accounts\templates\accounts\navbar.html:56
+#: .\accounts\templates\accounts\navbar.html:75
 msgid "Kirish"
 msgstr "Kirish"
 
+#: .\accounts\templates\accounts\main.html:5
+msgid "Index"
+msgstr "Index"
+
+#: .\accounts\templates\accounts\main.html:33
+msgid "Foydalanuvchi"
+msgstr "Foydalanuvchi"
+
 #: .\accounts\templates\accounts\main.html:35
 msgid "Registratsiyadan o'tmagan foydalanuvchi"
-msgstr "Registratsiyadan o'tmagan foydalanuvchi"
+msgstr ""
 
 #: .\accounts\templates\accounts\navbar.html:12
 msgid "STesting Loyihasi Haqida"
-msgstr "STesting Loyihasi Haqida"
+msgstr ""
 
 #: .\accounts\templates\accounts\navbar.html:16
 #: .\researches\templates\researches\inter_research.html:5
@@ -170,15 +182,15 @@ msgstr "STesting Loyihasi Haqida"
 #: .\researches\templates\researches\researches.html:5
 #: .\researches\templates\researches\researches.html:15
 msgid "Tadqiqotlar"
-msgstr "Tadqiqotlar"
+msgstr ""
 
 #: .\accounts\templates\accounts\navbar.html:19
 msgid "Videodarsliklar"
-msgstr "Videodarsliklar"
+msgstr ""
 
 #: .\accounts\templates\accounts\navbar.html:22
 msgid "Yo'riqnoma"
-msgstr "Yo'riqnoma"
+msgstr ""
 
 #: .\accounts\templates\accounts\navbar.html:25
 #: .\publications\templates\publications\international_nashr.html:5
@@ -188,52 +200,53 @@ msgstr "Yo'riqnoma"
 #: .\publications\templates\publications\national_nashr.html:5
 #: .\publications\templates\publications\national_nashr.html:15
 msgid "Nashrlar"
-msgstr "Nashrlar"
+msgstr ""
 
-#: .\accounts\templates\accounts\navbar.html:31
-msgid "Chiqish"
-msgstr "Chiqish"
-
-#: .\accounts\templates\accounts\navbar.html:39
+#: .\accounts\templates\accounts\navbar.html:33
+#: .\accounts\templates\accounts\navbar.html:58
 msgid "Language"
 msgstr "Til"
 
-#: .\accounts\templates\accounts\navbar.html:59
+#: .\accounts\templates\accounts\navbar.html:50
+msgid "Chiqish"
+msgstr ""
+
+#: .\accounts\templates\accounts\navbar.html:78
 #: .\accounts\templates\accounts\register1.html:5
 msgid "Ro'yxatdan o'tish"
-msgstr "Ro'yxatdan o'tish"
+msgstr ""
 
 #: .\accounts\templates\accounts\register1.html:10
 msgid "Iltimos akkauntingizdan chiqing"
-msgstr "Iltimos akkauntingizdan chiqing"
+msgstr ""
 
 #: .\accounts\templates\accounts\register1.html:40
 msgid "Davom ettirish"
-msgstr "Davom ettirish"
+msgstr ""
 
 #: .\accounts\views.py:48
 msgid "Sizning akkauntingiz bloklangan."
-msgstr "Sizning akkauntingiz bloklangan."
+msgstr ""
 
 #: .\accounts\views.py:50
 msgid "Noto'g'ri kirish tafsilotlari berildi"
-msgstr "Noto'g'ri kirish tafsilotlari berildi"
+msgstr ""
 
 #: .\publications\models.py:7 .\researches\models.py:7
 msgid "international"
-msgstr "international"
+msgstr "xalqaro"
 
 #: .\publications\models.py:8 .\researches\models.py:8
 msgid "national"
-msgstr "national"
+msgstr "milliy"
 
 #: .\publications\models.py:24
 msgid "Publication"
-msgstr "Publication"
+msgstr "Nashr"
 
 #: .\publications\models.py:25
 msgid "Publications"
-msgstr "Publications"
+msgstr "Nashrlar"
 
 #: .\publications\templates\publications\international_nashr.html:16
 #: .\publications\templates\publications\nashrlar.html:16
@@ -242,7 +255,7 @@ msgstr "Publications"
 #: .\researches\templates\researches\national_research.html:16
 #: .\researches\templates\researches\researches.html:16
 msgid "Xalqaro va milliy baholash tadqiqotlardan boxabar bo'ling"
-msgstr "Xalqaro va milliy baholash tadqiqotlardan boxabar bo'ling"
+msgstr ""
 
 #: .\publications\templates\publications\international_nashr.html:23
 #: .\publications\templates\publications\nashrlar.html:23
@@ -251,7 +264,7 @@ msgstr "Xalqaro va milliy baholash tadqiqotlardan boxabar bo'ling"
 #: .\researches\templates\researches\national_research.html:22
 #: .\researches\templates\researches\researches.html:23
 msgid "Xalqaro"
-msgstr "Xalqaro"
+msgstr ""
 
 #: .\publications\templates\publications\international_nashr.html:29
 #: .\publications\templates\publications\nashrlar.html:29
@@ -260,7 +273,7 @@ msgstr "Xalqaro"
 #: .\researches\templates\researches\national_research.html:26
 #: .\researches\templates\researches\researches.html:29
 msgid "Milliy"
-msgstr "Milliy"
+msgstr ""
 
 #: .\publications\templates\publications\international_nashr.html:40
 msgid "Publication Image"
@@ -270,7 +283,7 @@ msgstr "Nashr Tasviri"
 #: .\publications\templates\publications\nashrlar.html:52
 #: .\publications\templates\publications\national_nashr.html:51
 msgid "Yuklab olish"
-msgstr "Yuklab olish"
+msgstr ""
 
 #: .\publications\templates\publications\international_nashr.html:66
 #: .\publications\templates\publications\nashrlar.html:65
@@ -283,7 +296,7 @@ msgstr "Yuklab olish"
 #: .\videos\templates\videos\teacher_videos.html:65
 #: .\videos\templates\videos\videos.html:65
 msgid "Oldingi"
-msgstr "Oldingi"
+msgstr ""
 
 #: .\publications\templates\publications\international_nashr.html:71
 #: .\publications\templates\publications\nashrlar.html:70
@@ -296,7 +309,7 @@ msgstr "Oldingi"
 #: .\videos\templates\videos\teacher_videos.html:70
 #: .\videos\templates\videos\videos.html:70
 msgid "Keyingi"
-msgstr "Keyingi"
+msgstr ""
 
 #: .\publications\templates\publications\international_nashr.html:76
 #: .\publications\templates\publications\nashrlar.html:75
@@ -305,31 +318,94 @@ msgstr "Keyingi"
 #: .\researches\templates\researches\national_research.html:58
 #: .\researches\templates\researches\researches.html:63
 msgid "Tadqiqotlar to'plami mavjud emas."
-msgstr "Tadqiqotlar to'plami mavjud emas."
+msgstr ""
 
 #: .\publications\templates\publications\nashrlar.html:40
 msgid "Nashr Tasviri"
-msgstr "Nashr Tasviri"
+msgstr ""
 
 #: .\researches\models.py:24
 msgid "Research"
-msgstr ""
+msgstr "Tadqiqot"
 
 #: .\researches\models.py:25
 msgid "Researches"
+msgstr "Tadqiqotlar"
+
+#: .\stesting\settings.py:119 .\stesting\settings.py:129
+msgid "O'zbek"
 msgstr ""
 
-#: .\stesting\settings.py:117
+#: .\stesting\settings.py:120
 msgid "English"
 msgstr "Ingliz"
 
-#: .\stesting\settings.py:118
+#: .\stesting\settings.py:121
 msgid "Русский"
 msgstr "Rus"
 
-#: .\stesting\settings.py:119 .\stesting\settings.py:127
-msgid "O'zbek"
-msgstr "O'zbek"
+#: .\templates\admin\base.html:52
+msgid "Welcome,"
+msgstr "Xush kelibsiz,"
+
+#: .\templates\admin\base.html:57
+msgid "View site"
+msgstr "Saytni ko'rish"
+
+#: .\templates\admin\base.html:62
+msgid "Documentation"
+msgstr "Hujjatlashtirish"
+
+#: .\templates\admin\base.html:66
+msgid "Change password"
+msgstr "Parolni o'zgartirish"
+
+#: .\templates\admin\base.html:68
+msgid "Log out"
+msgstr "Chiqish"
+
+#: .\templates\admin\base.html:78
+msgid "Home"
+msgstr "Bosh sahifa"
+
+#: .\templates\admin\base_site.html:9
+msgid "STesting Administration"
+msgstr "STesting Administratsiyasi"
+
+#: .\templates\admin\login.html:44
+msgid "Please correct the error below."
+msgstr "Iltimos, quyidagi xatoni to'g'rilang."
+
+#: .\templates\admin\login.html:45
+msgid "Please correct the errors below."
+msgstr "Iltimos, quyidagi xatoni to'g'rilang."
+
+#: .\templates\admin\login.html:62
+#, python-format
+msgid ""
+"You are authenticated as %(username)s, but are not authorized to access this "
+"page. Would you like to login to a different account?"
+msgstr ""
+
+#: .\templates\admin\login.html:105
+msgid "Member Login"
+msgstr "Administratsiyaga Kirish"
+
+#: .\templates\admin\login.html:110
+msgid "Username"
+msgstr "Foydalanuvchi nomi"
+
+#: .\templates\admin\login.html:119
+msgid "Password"
+msgstr "Parol"
+
+#: .\templates\admin\login.html:147
+msgid "Forgotten your password or username?"
+msgstr "Parol yoki foydalanuvchi nomingizni unutdingizmi?"
+
+#: .\templates\admin\login.html:153
+msgid "Create your Account"
+msgstr "Akkount yaratish"
 
 #: .\videos\models.py:7
 msgid "TIMSS"
@@ -345,23 +421,23 @@ msgstr ""
 
 #: .\videos\models.py:12
 msgid "teachers"
-msgstr ""
+msgstr "uqituvchilar"
 
 #: .\videos\models.py:13
 msgid "students"
-msgstr ""
+msgstr "studentlar"
 
 #: .\videos\models.py:14
 msgid "parents"
-msgstr ""
+msgstr "ota-onalar"
 
 #: .\videos\models.py:30
 msgid "Video"
-msgstr ""
+msgstr "Video"
 
 #: .\videos\models.py:31
 msgid "Videos"
-msgstr ""
+msgstr "Videolar"
 
 #: .\videos\templates\videos\parents_videos.html:5
 #: .\videos\templates\videos\parents_videos.html:15
@@ -372,39 +448,39 @@ msgstr ""
 #: .\videos\templates\videos\videos.html:5
 #: .\videos\templates\videos\videos.html:15
 msgid "Videodarslar"
-msgstr "Videodarslar"
+msgstr ""
 
 #: .\videos\templates\videos\parents_videos.html:16
 #: .\videos\templates\videos\student_videos.html:16
 #: .\videos\templates\videos\teacher_videos.html:16
 #: .\videos\templates\videos\videos.html:16
 msgid "Xalqaro va milliy baholash videodarslardan boxabar bo'ling"
-msgstr "Xalqaro va milliy baholash videodarslardan boxabar bo'ling"
+msgstr ""
 
 #: .\videos\templates\videos\parents_videos.html:23
 #: .\videos\templates\videos\student_videos.html:23
 #: .\videos\templates\videos\teacher_videos.html:23
 #: .\videos\templates\videos\videos.html:23
 msgid "O‘quvchilaruchun"
-msgstr "O‘quvchilaruchun"
+msgstr "O‘quvchilar"
 
 #: .\videos\templates\videos\parents_videos.html:29
 #: .\videos\templates\videos\student_videos.html:29
 #: .\videos\templates\videos\teacher_videos.html:29
 #: .\videos\templates\videos\videos.html:29
 msgid "O‘qituvchilaruchun"
-msgstr "O‘qituvchilaruchun"
+msgstr "O‘qituvchilar"
 
 #: .\videos\templates\videos\parents_videos.html:34
 #: .\videos\templates\videos\student_videos.html:34
 #: .\videos\templates\videos\teacher_videos.html:34
 #: .\videos\templates\videos\videos.html:34
 msgid "Ota-onalaruchun"
-msgstr "Ota-onalaruchun"
+msgstr "Ota-onalar"
 
 #: .\videos\templates\videos\parents_videos.html:76
 #: .\videos\templates\videos\student_videos.html:76
 #: .\videos\templates\videos\teacher_videos.html:76
 #: .\videos\templates\videos\videos.html:76
 msgid "Videolar to'plami mavjud emas."
-msgstr "Videolar to'plami mavjud emas."
+msgstr ""

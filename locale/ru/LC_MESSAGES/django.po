@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-06 15:33+0500\n"
+"POT-Creation-Date: 2021-04-09 15:06+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -148,14 +148,26 @@ msgstr "Электронная почта:"
 msgid "Telefon Raqam:"
 msgstr "Номер Телефона:"
 
+#: .\accounts\templates\accounts\footer.html:77
+msgid "Copyright"
+msgstr "Авторские Права"
+
 #: .\accounts\templates\accounts\login.html:10
 msgid "Iltimos avval akkauntdan chiqing."
 msgstr "Пожалуйста, сначала выйдите из своей учетной записи."
 
 #: .\accounts\templates\accounts\login.html:36
-#: .\accounts\templates\accounts\navbar.html:56
+#: .\accounts\templates\accounts\navbar.html:75
 msgid "Kirish"
 msgstr "Авторизоваться"
+
+#: .\accounts\templates\accounts\main.html:5
+msgid "Index"
+msgstr "Индекс"
+
+#: .\accounts\templates\accounts\main.html:33
+msgid "Foydalanuvchi"
+msgstr "Пользователь"
 
 #: .\accounts\templates\accounts\main.html:35
 msgid "Registratsiyadan o'tmagan foydalanuvchi"
@@ -193,15 +205,16 @@ msgstr "Инструкция"
 msgid "Nashrlar"
 msgstr "Публикации"
 
-#: .\accounts\templates\accounts\navbar.html:31
-msgid "Chiqish"
-msgstr "Выход"
-
-#: .\accounts\templates\accounts\navbar.html:39
+#: .\accounts\templates\accounts\navbar.html:33
+#: .\accounts\templates\accounts\navbar.html:58
 msgid "Language"
 msgstr "Язык"
 
-#: .\accounts\templates\accounts\navbar.html:59
+#: .\accounts\templates\accounts\navbar.html:50
+msgid "Chiqish"
+msgstr "Выход"
+
+#: .\accounts\templates\accounts\navbar.html:78
 #: .\accounts\templates\accounts\register1.html:5
 msgid "Ro'yxatdan o'tish"
 msgstr "Подписывать"
@@ -216,11 +229,11 @@ msgstr "Продолжить"
 
 #: .\accounts\views.py:48
 msgid "Sizning akkauntingiz bloklangan."
-msgstr ""
+msgstr "Ваш аккаунт заблокирован."
 
 #: .\accounts\views.py:50
 msgid "Noto'g'ri kirish tafsilotlari berildi"
-msgstr "Ваш аккаунт заблокирован."
+msgstr "Неверная информация о входе была предоставлена"
 
 #: .\publications\models.py:7 .\researches\models.py:7
 msgid "international"
@@ -254,7 +267,7 @@ msgstr "Будьте в курсе международных и национа�
 #: .\researches\templates\researches\national_research.html:22
 #: .\researches\templates\researches\researches.html:23
 msgid "Xalqaro"
-msgstr "Международные"
+msgstr "Международный"
 
 #: .\publications\templates\publications\international_nashr.html:29
 #: .\publications\templates\publications\nashrlar.html:29
@@ -316,25 +329,86 @@ msgstr "Изображение публикации"
 
 #: .\researches\models.py:24
 msgid "Research"
-msgstr ""
+msgstr "Исследование"
 
 #: .\researches\models.py:25
 msgid "Researches"
-msgstr "Исследование"
+msgstr "Исследования"
 
-#: .\stesting\settings.py:117
+#: .\stesting\settings.py:119 .\stesting\settings.py:129
+msgid "O'zbek"
+msgstr "Узбекский"
+
+#: .\stesting\settings.py:120
 msgid "English"
 msgstr "Английский"
 
-#: .\stesting\settings.py:118
+#: .\stesting\settings.py:121
 msgid "Русский"
+msgstr "Русский"
+
+#: .\templates\admin\base.html:52
+msgid "Welcome,"
+msgstr "Добро пожаловать,"
+
+#: .\templates\admin\base.html:57
+msgid "View site"
+msgstr "Просмотр сайта"
+
+#: .\templates\admin\base.html:62
+msgid "Documentation"
+msgstr "Документация"
+
+#: .\templates\admin\base.html:66
+msgid "Change password"
+msgstr "Поменять пароль"
+
+#: .\templates\admin\base.html:68
+msgid "Log out"
+msgstr "Выйти"
+
+#: .\templates\admin\base.html:78
+msgid "Home"
+msgstr "Главная Страница"
+
+#: .\templates\admin\base_site.html:9
+msgid "STesting Administration"
+msgstr "Администрация 'STesting'"
+
+#: .\templates\admin\login.html:44
+msgid "Please correct the error below."
+msgstr "Пожалуйста, исправьте ошибку ниже."
+
+#: .\templates\admin\login.html:45
+msgid "Please correct the errors below."
+msgstr "Пожалуйста, исправьте приведенные ниже ошибки."
+
+#: .\templates\admin\login.html:62
+#, python-format
+msgid ""
+"You are authenticated as %(username)s, but are not authorized to access this "
+"page. Would you like to login to a different account?"
 msgstr ""
 
-#: .\stesting\settings.py:119 .\stesting\settings.py:127
-#, fuzzy
-#| msgid "Uzbek"
-msgid "O'zbek"
-msgstr "Узбекский"
+#: .\templates\admin\login.html:105
+msgid "Member Login"
+msgstr "Логин Администратора"
+
+#: .\templates\admin\login.html:110
+msgid "Username"
+msgstr "Имя пользователя"
+
+#: .\templates\admin\login.html:119
+msgid "Password"
+msgstr "Пароль"
+
+#: .\templates\admin\login.html:147
+msgid "Forgotten your password or username?"
+msgstr "Забыли свой пароль или имя пользователя?"
+
+#: .\templates\admin\login.html:153
+msgid "Create your Account"
+msgstr "Создайте свою учетную запись"
 
 #: .\videos\models.py:7
 msgid "TIMSS"
@@ -350,23 +424,23 @@ msgstr ""
 
 #: .\videos\models.py:12
 msgid "teachers"
-msgstr ""
+msgstr "учителя"
 
 #: .\videos\models.py:13
 msgid "students"
-msgstr ""
+msgstr "студенты"
 
 #: .\videos\models.py:14
 msgid "parents"
-msgstr ""
+msgstr "родители"
 
 #: .\videos\models.py:30
 msgid "Video"
-msgstr ""
+msgstr "Видео"
 
 #: .\videos\models.py:31
 msgid "Videos"
-msgstr ""
+msgstr "Видео"
 
 #: .\videos\templates\videos\parents_videos.html:5
 #: .\videos\templates\videos\parents_videos.html:15
@@ -413,6 +487,3 @@ msgstr "Для Родителей"
 #: .\videos\templates\videos\videos.html:76
 msgid "Videolar to'plami mavjud emas."
 msgstr "Коллекция видео новостей недоступна."
-
-#~ msgid "Russian"
-#~ msgstr "Русский"

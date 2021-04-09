@@ -36,7 +36,7 @@
       data-admin-utc-offset="{% now " Z" %}">
 
 <!-- Container -->
-<div id="container-fluid">
+<div id="container">
 
 {% if 'login' not in request.path %}
     {% if not is_popup %}
@@ -98,7 +98,7 @@
                 {% endif %}
             {% endblock messages %}
             <!-- Content -->
-            <div>
+            <div id="content">
                 {% block pretitle %}{% endblock %}
                 {% block content_title %}{% if title %}<h1>{{ title }}</h1>{% endif %}{% endblock %}
                 {% block content_subtitle %}{% if subtitle %}<h2>{{ subtitle }}</h2>{% endif %}{% endblock %}
@@ -110,9 +110,9 @@
                 <br class="clear">
             </div>
             <!-- END Content -->
-            {% block footer %}
-                <div id="footer" style="padding: 0;"></div>
-            {% endblock %}
+
+                <div id="footer"></div>
+
         </div>
     </div>
 </div>
