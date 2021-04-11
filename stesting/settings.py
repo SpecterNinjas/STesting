@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     # Installations
     'crispy_forms',
 
+
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
@@ -137,7 +138,6 @@ locale.LANG_INFO = LANG_INFO
 # MODELTRANSLATION_DEFAULT_LANGUAGE = 'uz'
 # MODELTRANSLATION_LANGUAGES = ('uz', 'en', 'ru')
 # MODELTRANSLATION_FALLBACK_LANGUAGES = ('uz', 'en', 'ru')
-
 
 
 TIME_ZONE = 'UTC'

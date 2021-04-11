@@ -4,10 +4,10 @@
 {#{% block title %}{% if subtitle %}{{ subtitle }} | {% endif %}{{ title }} | {{ site_title|default:_('Django site admin') }}{% endblock %}#}
 
 
-{% if 'login' not in request.path %}
-{% block branding %}
-<h1 id="site-name"><a href="{% url 'admin:index' %}">{% trans "STesting Administration" %}</a></h1>
-{% endblock %}
-{% endif %}
+{#{% if 'login' not in request.path %}#}
+    {#{% block branding %}#}
+    {#<h1 id="site-name"><a href="{% url 'admin:index' %}">{% trans "STesting Administration" %}</a></h1>#}
+    {#{% endblock %}#}
+{#{% endif %}#}
 
 {% block nav-global %}{% endblock %}

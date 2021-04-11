@@ -1,0 +1,380 @@
+{% extends "admin/base_site.html" %}
+{% load i18n static %}
+
+{#{% block extrastyle %}{{ block.super }}#}
+{#    <link rel="stylesheet" type="text/css" href="{% static "admin/css/dashboard.css" %}">#}
+{#{% endblock %}#}
+
+{% block css_link %}
+    <link href="{% static 'accounts/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css"/>
+    <link href="{% static 'accounts/css/core.css' %}" rel="stylesheet" type="text/css"/>
+    <link href="{% static 'accounts/css/components.css' %}" rel="stylesheet" type="text/css"/>
+    <link href="{% static 'accounts/css/icons.css' %}" rel="stylesheet" type="text/css"/>
+    <link href="{% static 'accounts/css/pages.css' %}" rel="stylesheet" type="text/css"/>
+    <link href="{% static 'accounts/css/responsive.css' %}" rel="stylesheet" type="text/css"/>
+    <script src="{% static 'accounts/js/modernizr.min.js' %}"></script>
+{% endblock %}
+
+{#{% block coltype %}colMS{% endblock %}#}
+{##}
+{#{% block bodyclass %}{{ block.super }} dashboard{% endblock %}#}
+{##}
+{#{% block breadcrumbs %}{% endblock %}#}
+
+
+{% block content %}
+
+    {% if has_permission %}
+        <body class="fixed-left">
+
+        <!-- Begin page -->
+        <div id="wrapper">
+
+            <!-- Top Bar Start -->
+            <div class="topbar">
+
+                <!-- LOGO -->
+                <div class="topbar-left">
+                    <div class="text-center">
+                        <a href="{% url 'admin:index' %}" class="logo"><i class="icon-magnet icon-c-logo"></i><span>Ub<i
+                                class="md md-album"></i>ld</span></a>
+                        <!-- Image Logo here -->
+                        <!--<a href="index.html" class="logo">-->
+                        <!--<i class="icon-c-logo"> <img src="assets/images/logo_sm.png" height="42"/> </i>-->
+                        <!--<span><img src="assets/images/logo_light.png" height="20"/></span>-->
+                        <!--</a>-->
+                    </div>
+                </div>
+
+                <!-- Button mobile view to collapse sidebar menu -->
+                <div class="navbar navbar-default" role="navigation">
+                    <div class="container">
+                        <div class="">
+                            <div class="pull-left">
+                                <button class="button-menu-mobile open-left waves-effect waves-light">
+                                    <i class="md md-menu"></i>
+                                </button>
+                                <span class="clearfix"></span>
+                            </div>
+
+                            <ul class="nav navbar-nav hidden-xs">
+                                <li><a href="#" class="waves-effect waves-light">Files</a></li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle waves-effect waves-light" data-toggle="dropdown"
+                                       role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span
+                                            class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li class="list-unstyled"><a href="#">Action</a></li>
+                                        <li class="list-unstyled"><a href="#">Another action</a></li>
+                                        <li class="list-unstyled"><a href="#">Something else here</a></li>
+                                        <li class="list-unstyled"><a href="#">Separated link</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <form role="search" class="navbar-left app-search pull-left hidden-xs">
+                                <input type="text" placeholder="Search..." class="form-control">
+                                <a href=""><i class="fa fa-search"></i></a>
+                            </form>
+
+
+                            <ul class="nav navbar-nav navbar-right pull-right">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                       <i class="ion-ios7-world-outline" style="font-size: 1.7em;margin-top: 17px;"></i>
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        {% get_current_language as LANGUAGE_CODE %}
+                                        {% get_available_languages as LANGUAGES %}
+                                        {% get_language_info_list for LANGUAGES as languages %}
+
+                                        {% for lang in languages %}
+                                            <li class="list-unstyled">
+                                                <a class="dropdown-item" href="/{{ lang.code }}{{ request.path|slice:'3:' }}">
+                                                    {{ lang.name_local }}
+                                                </a>
+                                            </li>
+                                        {% endfor %}
+                                    </ul>
+                                </li>
+                                <li class="hidden-xs">
+                                    <a href="#" id="btn-fullscreen" class="waves-effect waves-light"><i
+                                            class="icon-size-fullscreen"></i></a>
+                                </li>
+                                <li class="hidden-xs">
+                                    <a href="#" class="right-bar-toggle waves-effect waves-light"><i
+                                            class="icon-settings"></i></a>
+                                </li>
+                                <li class="dropdown top-menu-item-xs">
+                                    <a href="" class="dropdown-toggle profile waves-effect waves-light"
+                                       data-toggle="dropdown" aria-expanded="true"><img
+                                            src="{% static 'accounts/images/users/avatar-1.jpg' %}" alt="user-img"
+                                            class="img-circle"> </a>
+                                    <ul class="dropdown-menu">
+                                        <li class="list-unstyled"><a href="javascript:void(0)"><i
+                                                class="ti-user m-r-10 text-custom"></i>
+                                            {% trans 'Profile' %}</a>
+                                        </li>
+                                        <li class="list-unstyled"><a href="javascript:void(0)"><i
+                                                class="ti-settings m-r-10 text-custom"></i>
+                                            {% trans 'Settings' %}</a></li>
+                                        <li class="list-unstyled"><a href="javascript:void(0)"><i
+                                                class="ti-lock m-r-10 text-custom"></i>
+                                            {% trans 'Lock screen' %}</a></li>
+                                        <li class="divider list-unstyled"></li>
+                                        <li class="list-unstyled"><a href="{% url 'accounts:logout' %}"><i
+                                                class="ti-power-off m-r-10 text-danger"></i>
+                                            {% trans 'Logout' %}</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--/.nav-collapse -->
+                    </div>
+                </div>
+            </div>
+            <!-- Top Bar End -->
+
+
+            <!-- ========== Left Sidebar Start ========== -->
+
+            <div class="left side-menu" style="margin-left: -41px;">
+                <div class="sidebar-inner slimscrollleft">
+                    <div class="user-details">
+                        <div class="pull-left">
+                            <img src="{% static 'accounts/images/users/avatar-1.jpg' %}" alt=""
+                                 class="thumb-md img-circle">
+                        </div>
+                        <div class="user-info">
+                            <div class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                    {% firstof user.get_short_name user.get_username %}
+                                    <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="javascript:void(0)"><i class="md md-face-unlock"></i> Profile
+                                        <div class="ripple-wrapper"></div>
+                                    </a></li>
+                                    <li><a href="javascript:void(0)"><i class="md md-settings"></i> Settings</a></li>
+                                    <li><a href="javascript:void(0)"><i class="md md-lock"></i> Lock screen</a></li>
+                                    <li><a href="{% url 'accounts:logout' %}"><i
+                                            class="md md-settings-power"></i> {% trans 'Logout' %}</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <p class="text-muted m-0">Administrator</p>
+                        </div>
+                    </div>
+                    <!--- Divider -->
+
+                    <div id="sidebar-menu">
+                        {% if app_list %}
+                            <ul>
+
+                                <li class="text-muted menu-title">{% trans 'Administration Panel' %}</li>
+
+                                {% for app in app_list %}
+                                    <li class="has_sub">
+                                        <a href="javascript:void(0);" class="waves-effect"><i class="ti-home"></i>
+                                            <span> {{ app.name }} </span> <span class="menu-arrow"></span></a>
+                                        <ul class="list-unstyled">
+                                            {% for model in app.models %}
+                                                {% if model.admin_url %}
+                                                    <li class="list-inline">
+                                                        <a class="list-inline-item"
+                                                           href="{{ model.admin_url }}">{{ model.name }}</a>
+                                                    </li>
+                                                {% else %}
+                                                    <li>{{ model.name }}</li>
+                                                {% endif %}
+
+                                            {% endfor %}
+                                        </ul>
+                                    </li>
+                                {% endfor %}
+
+                            </ul>
+                        {% endif %}
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <!-- Left Sidebar End -->
+
+
+            <!-- ============================================================== -->
+            <!-- Start right Content here -->
+            <!-- ============================================================== -->
+            <div class="content-page">
+                <!-- Start content -->
+                <div class="content">
+                    <div class="container">
+
+                        <!-- Page-Title -->
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="btn-group pull-right m-t-15">
+                                    <button type="button"
+                                            class="btn btn-default dropdown-toggle waves-effect waves-light"
+                                            data-toggle="dropdown" aria-expanded="false">Settings <span class="m-l-5"><i
+                                            class="fa fa-cog"></i></span></button>
+                                    <ul class="dropdown-menu drop-menu-right" role="menu">
+                                        <li><a href="#">Action</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Separated link</a></li>
+                                    </ul>
+                                </div>
+
+                                <h4 class="page-title">Leftbar With User</h4>
+                                <ol class="breadcrumb">
+                                    <li>
+                                        <a href="{% url 'admin:index' %}">Ubold</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Layouts</a>
+                                    </li>
+                                    <li class="active">
+                                        Leftbar with user
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div style="min-height: 1000px;"></div>
+
+
+                    </div> <!-- container -->
+
+                </div> <!-- content -->
+
+
+            </div>
+
+
+            <!-- ============================================================== -->
+            <!-- End Right content here -->
+            <!-- ============================================================== -->
+
+
+            <!-- Right Sidebar -->
+            <div class="side-bar right-bar nicescroll">
+                <h4 class="text-center">Chat</h4>
+                <div class="contact-list nicescroll">
+                    <ul class="list-group contacts-list">
+
+                    </ul>
+                </div>
+            </div>
+            <!-- /Right-bar -->
+
+        </div>
+        <!-- END wrapper -->
+
+
+        </body>
+
+    {% else %}
+        <h2>You don't have permission.</h2>
+    {% endif %}
+
+    {#    <div id="content-main">#}
+    {##}
+    {#        {% if app_list %}#}
+    {##}
+    {#            {% for app in app_list %}#}
+    {#                <div class="app-{{ app.app_label }} module">#}
+    {#                    <table>#}
+    {#                        <caption>#}
+    {#                            < a href="{{ app.app_url }}" class="section"#}
+    {#                               title="{% blocktrans with name=app.name %}Models in the {{ name }} application{% endblocktrans %}">{{ app.name }}</a>#}
+    {#                        </caption>#}
+    {#                        {% for model in app.models %}#}
+    {#                            <tr class="model-{{ model.object_name|lower }}">#}
+    {#                                {% if model.admin_url %}#}
+    {#                                    <th scope="row"><a href="{{ model.admin_url }}">{{ model.name }}</a></th>#}
+    {#                                {% else %}#}
+    {#                                    <th scope="row">{{ model.name }}</th>#}
+    {#                                {% endif %}#}
+    {##}
+    {#                                {% if model.add_url %}#}
+    {#                                    <td><a href="{{ model.add_url }}" class="addlink">{% trans 'Add' %}</a></td>#}
+    {#                                {% else %}#}
+    {#                                    <td>&nbsp;</td>#}
+    {#                                {% endif %}#}
+    {##}
+    {#                                {% if model.admin_url %}#}
+    {#                                    {% if model.view_only %}#}
+    {#                                        <td><a href="{{ model.admin_url }}" class="viewlink">{% trans 'View' %}</a></td>#}
+    {#                                    {% else %}#}
+    {#                                        <td><a href="{{ model.admin_url }}" class="changelink">{% trans 'Change' %}</a>#}
+    {#                                        </td>#}
+    {#                                    {% endif %}#}
+    {#                                {% else %}#}
+    {#                                    <td>&nbsp;</td>#}
+    {#                                {% endif %}#}
+    {#                            </tr>#}
+    {#                        {% endfor %}#}
+    {#                    </table>#}
+    {#                </div>#}
+    {#            {% endfor %}#}
+    {#        {% else %}#}
+    {#            <p>{% trans "You don't have permission to view or edit anything." %}</p>#}
+    {#        {% endif %}#}
+    {#    </div>#}
+{% endblock %}
+
+{% block js_code %}
+    <script>
+        var resizefunc = [];
+    </script>
+
+    <!-- jQuery  -->
+    <script src="{% static 'accounts/js/jquery.min.js' %}"></script>
+    <script src="{% static 'accounts/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'accounts/js/detect.js' %}"></script>
+    <script src="{% static 'accounts/js/fastclick.js' %}"></script>
+    <script src="{% static 'accounts/js/jquery.slimscroll.js' %}"></script>
+    <script src="{% static 'accounts/js/jquery.blockUI.js' %}"></script>
+    <script src="{% static 'accounts/js/waves.js' %}"></script>
+    <script src="{% static 'accounts/js/wow.min.js' %}"></script>
+    <script src="{% static 'accounts/js/jquery.nicescroll.js' %}"></script>
+    <script src="{% static 'accounts/js/jquery.scrollTo.min.js' %}"></script>
+    <script src="{% static 'accounts/js/jquery.core.js' %}"></script>
+    <script src="{% static 'accounts/js/jquery.app.js' %}"></script>
+{% endblock %}
+
+{#{% block sidebar %}#}
+{#    <div id="content-related">#}
+{#        <div class="module" id="recent-actions-module">#}
+{#            <h2>{% trans 'Recent actions' %}</h2>#}
+{#            <h3>{% trans 'My actions' %}</h3>#}
+{#            {% load log %}#}
+{#            {% get_admin_log 10 as admin_log for_user user %}#}
+{#            {% if not admin_log %}#}
+{#                <p>{% trans 'None available' %}</p>#}
+{#            {% else %}#}
+{#                <ul class="actionlist">#}
+{#                    {% for entry in admin_log %}#}
+{#                        <li class="{% if entry.is_addition %}addlink{% endif %}{% if entry.is_change %}changelink{% endif %}{% if entry.is_deletion %}deletelink{% endif %}">#}
+{#                            {% if entry.is_deletion or not entry.get_admin_url %}#}
+{#                                {{ entry.object_repr }}#}
+{#                            {% else %}#}
+{#                                <a href="{{ entry.get_admin_url }}">{{ entry.object_repr }}</a>#}
+{#                            {% endif %}#}
+{#                            <br>#}
+{#                            {% if entry.content_type %}#}
+{#                                <span class="mini quiet">{% filter capfirst %}#}
+{#                                    {{ entry.content_type }}{% endfilter %}</span>#}
+{#                            {% else %}#}
+{#                                <span class="mini quiet">{% trans 'Unknown content' %}</span>#}
+{#                            {% endif %}#}
+{#                        </li>#}
+{#                    {% endfor %}#}
+{#                </ul>#}
+{#            {% endif %}#}
+{#        </div>#}
+{#    </div>#}
+{#{% endblock %}#}

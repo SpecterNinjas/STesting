@@ -39,7 +39,7 @@
 
                         {% for lang in languages %}
                             <li>
-                                <a class="dropdown-item" href="/{{ lang.code }}/">
+                                <a class="dropdown-item" href="/{{ lang.code }}{{ request.path|slice:'3:' }}">
                                     {{ lang.name_local }}
                                 </a>
                             </li>
@@ -83,3 +83,7 @@
         {% endif %}
     </div>
 </nav>
+
+<script>
+
+</script>
